@@ -2037,6 +2037,7 @@
                             phone: data.phone,
                             hutk: getHutk(),
                             ip_address: ipAddress,
+                            submitted_at: new Date().toISOString(),
                             ...getPageInfo(),
                             ...getUrlParams()
                         })
@@ -2091,6 +2092,7 @@
                             email: data.email,
                             hutk: getHutk(),
                             ip_address: ipAddress,
+                            submitted_at: new Date().toISOString(),
                             ...getPageInfo(),
                             ...getUrlParams()
                         })
