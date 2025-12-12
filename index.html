@@ -1922,6 +1922,106 @@
                 setInterval(nextStat, displayDuration);
             }
         });
+
+        // Form submission to Zapier
+        const ZAPIER_WEBHOOK = 'https://hooks.zapier.com/hooks/catch/11261250/ufclj1v/';
+
+        // Demo form handler
+        const demoForm = document.getElementById('demo-form');
+        if (demoForm) {
+            demoForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+
+                // Honeypot check - if filled, it's a bot
+                if (data.website) {
+                    console.log('Bot detected');
+                    return;
+                }
+
+                const btn = this.querySelector('button');
+                const originalText = btn.textContent;
+                btn.textContent = 'Sending...';
+                btn.disabled = true;
+
+                try {
+                    await fetch(ZAPIER_WEBHOOK, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            form: 'demo',
+                            name: data.name,
+                            email: data.email,
+                            company: data.company,
+                            phone: data.phone
+                        })
+                    });
+
+                    btn.textContent = 'Thank You!';
+                    btn.style.background = '#43922f';
+                    this.reset();
+
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }, 3000);
+                } catch (error) {
+                    btn.textContent = 'Error - Try Again';
+                    btn.disabled = false;
+                }
+            });
+        }
+
+        // Email form handler
+        const emailForm = document.querySelector('.email-form');
+        if (emailForm) {
+            emailForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+
+                // Honeypot check
+                if (data.website) {
+                    console.log('Bot detected');
+                    return;
+                }
+
+                const btn = this.querySelector('button');
+                const originalText = btn.textContent;
+                btn.textContent = 'Sending...';
+                btn.disabled = true;
+
+                try {
+                    await fetch(ZAPIER_WEBHOOK, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            form: 'lead_magnet',
+                            email: data.email
+                        })
+                    });
+
+                    btn.textContent = 'Check Your Email!';
+                    btn.style.background = '#43922f';
+                    this.reset();
+
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }, 3000);
+                } catch (error) {
+                    btn.textContent = 'Error - Try Again';
+                    btn.disabled = false;
+                }
+            });
+        }
     </script>
 
 </body>
