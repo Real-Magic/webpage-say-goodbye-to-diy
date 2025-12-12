@@ -273,12 +273,27 @@
             50% { background-position: 100% 50%; }
         }
 
+        /* Site Header */
+        .site-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 24px 5%;
+            z-index: 100;
+        }
+
+        .header-logo img {
+            height: 36px;
+            width: auto;
+        }
+
         .hero-section {
             background-color: var(--lev-blue);
             background-image: linear-gradient(135deg, var(--lev-blue) 0%, #0040cc 50%, var(--lev-blue) 100%);
             background-size: 200% 200%;
             animation: gradientShift 15s ease infinite;
-            padding: 64px 5% 140px;
+            padding: 100px 5% 140px;
             position: relative;
             overflow-x: clip;
         }
@@ -1161,10 +1176,9 @@
             margin: 0 auto;
         }
 
-        .footer-logo {
-            font-family: 'Sora', sans-serif;
-            font-size: 28px;
-            font-weight: 700;
+        .footer-logo img {
+            height: 32px;
+            width: auto;
         }
 
         .footer-links {
@@ -1290,6 +1304,13 @@
 
     <!-- ========== HERO SECTION ========== -->
     <section class="hero-section">
+        <!-- Header with Logo -->
+        <header class="site-header">
+            <a href="https://www.levitate.ai" class="header-logo">
+                <img src="images/levitate-logo-white.png" alt="Levitate">
+            </a>
+        </header>
+
         <!-- Animated Background -->
         <div class="hero-bg-wrapper">
             <dotlottie-player src="documents/home-hero-bg.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
@@ -1816,7 +1837,9 @@
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-logo">Levitate</div>
+            <a href="https://www.levitate.ai" class="footer-logo">
+                <img src="images/levitate-logo-white.png" alt="Levitate">
+            </a>
             <div class="footer-links">
                 <a href="https://www.levitate.ai/features">Features</a>
                 <a href="https://www.levitate.ai/plans">Plans</a>
