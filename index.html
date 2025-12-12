@@ -1769,9 +1769,9 @@
             <form id="demo-form" class="cta-demo-form">
                 <input type="text" name="website" style="position: absolute; left: -9999px;" tabindex="-1" autocomplete="off">
                 <div class="form-grid">
-                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="text" name="first_name" placeholder="First name" required>
+                    <input type="text" name="last_name" placeholder="Last name" required>
                     <input type="email" name="email" placeholder="Work email" required>
-                    <input type="text" name="company" placeholder="Company name" required>
                     <input type="tel" name="phone" placeholder="Phone number">
                 </div>
                 <button type="submit" class="btn-primary">Book My Demo</button>
@@ -1926,6 +1926,29 @@
         // Form submission to Zapier
         const ZAPIER_WEBHOOK = 'https://hooks.zapier.com/hooks/catch/11261250/ufclj1v/';
 
+        // Helper to get URL parameters
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                utm_source: params.get('utm_source') || '',
+                utm_medium: params.get('utm_medium') || '',
+                utm_campaign: params.get('utm_campaign') || '',
+                utm_content: params.get('utm_content') || '',
+                utm_term: params.get('utm_term') || '',
+                gclid: params.get('gclid') || '',
+                fbclid: params.get('fbclid') || '',
+                rdt_cid: params.get('rdt_cid') || ''
+            };
+        }
+
+        // Get page info
+        function getPageInfo() {
+            return {
+                page_url: window.location.href,
+                page_uri: window.location.pathname
+            };
+        }
+
         // Demo form handler
         const demoForm = document.getElementById('demo-form');
         if (demoForm) {
@@ -1953,10 +1976,12 @@
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
                             form: 'demo',
-                            name: data.name,
+                            first_name: data.first_name,
+                            last_name: data.last_name,
                             email: data.email,
-                            company: data.company,
-                            phone: data.phone
+                            phone: data.phone,
+                            ...getPageInfo(),
+                            ...getUrlParams()
                         })
                     });
 
@@ -2003,7 +2028,9 @@
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
                             form: 'lead_magnet',
-                            email: data.email
+                            email: data.email,
+                            ...getPageInfo(),
+                            ...getUrlParams()
                         })
                     });
 
