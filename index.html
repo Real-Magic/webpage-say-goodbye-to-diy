@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say Goodbye to DIY Marketing | Levitate</title>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&family=Sriracha&display=swap" rel="stylesheet">
+    <style>
+        /* ========== CSS VARIABLES (from Webflow) ========== */
+        :root {
+            --lev-blue: #015bff;
+            --lev-light-blue: #00d1ff;
+            --lev-dark-blue: #00243d;
+            --lev-light-green: #95dd83;
+            --lev-med-green: #43922f;
+            --lev-yellow: #ffcd19;
+            --lev-salmon: #ee846f;
+            --lev-purple: #9432f6;
+            --lev-red: #ea0606;
+            --lev-teal: #40b3a2;
+            --white: #fff;
+            --black: #000;
+        }
+
+        /* ========== RESET & BASE ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.8em;
+            color: var(--black);
+        }
+
+        /* ========== TYPOGRAPHY (matching Webflow) ========== */
+        h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 1.1em;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1em;
+            margin-bottom: 48px;
+        }
+
+        h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.3em;
+            margin-bottom: 18px;
+        }
+
+        h4 {
+            font-family: 'Sora', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.3em;
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        .big-paragraph {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        /* ========== EMPHASIS TEXT (Sriracha) ========== */
+        .emphasis-text {
+            font-family: 'Sriracha', cursive;
+            font-size: 1.2em;
+            font-weight: 400;
+            display: inline-block;
+        }
+
+        .emphasis-text.yellow {
+            color: var(--lev-yellow);
+        }
+
+        .emphasis-text.blue {
+            color: var(--lev-blue);
+        }
+
+        .emphasis-text.green {
+            color: var(--lev-med-green);
+        }
+
+        .emphasis-text.red {
+            color: var(--lev-red);
+        }
+
+        /* ========== LAYOUT ========== */
+        .container {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .container.wide {
+            max-width: 1200px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .section {
+            padding: 64px 5%;
+        }
+
+        .mg-16px { height: 16px; }
+        .mg-32px { height: 32px; }
+        .mg-48px { height: 48px; }
+
+        /* ========== BUTTONS (matching Webflow) ========== */
+        .btn-primary {
+            background-color: var(--lev-blue);
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 8px;
+            padding: 16px 24px;
+            font-family: 'Lexend', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 26px;
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0645b9;
+        }
+
+        .btn-primary.green-light-hover {
+            background-color: var(--lev-light-green);
+            color: var(--black);
+        }
+
+        .btn-primary.green-light-hover:hover {
+            background-color: var(--lev-yellow);
+        }
+
+        .btn-primary.triple-shadow {
+            white-space: nowrap;
+            height: 60px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary.hero-cta {
+            background: linear-gradient(
+                110deg,
+                var(--lev-yellow) 0%,
+                var(--lev-yellow) 40%,
+                #ffe066 50%,
+                var(--lev-yellow) 60%,
+                var(--lev-yellow) 100%
+            );
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+            color: var(--lev-dark-blue);
+            font-size: 18px;
+            padding: 20px 48px;
+            height: auto;
+            box-shadow:
+                0 4px 0 0 rgba(0, 36, 61, 0.3),
+                0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary.hero-cta:hover {
+            transform: translateY(-2px);
+            animation-play-state: paused;
+            box-shadow:
+                0 6px 0 0 rgba(0, 36, 61, 0.3),
+                0 12px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-primary.green-light-hover.triple-shadow {
+            color: var(--white);
+        }
+
+        .btn-primary.secondary {
+            background-color: var(--lev-dark-blue);
+        }
+
+        .btn-primary.secondary:hover {
+            background-color: var(--lev-light-blue);
+        }
+
+        .btn-primary.red {
+            background-color: var(--lev-red);
+        }
+
+        /* ========== DOUBLE BORDER (signature Levitate style) ========== */
+        .double-border {
+            border: 0.25rem solid var(--lev-med-green);
+            background-color: rgba(68, 172, 73, 0.1);
+            box-shadow: 0 0 0 0.5rem rgba(68, 172, 73, 0.2);
+            border-radius: 1.75rem;
+        }
+
+        .double-border.light-blue {
+            border-color: var(--lev-light-blue);
+            box-shadow: 0 0 0 10px rgba(0, 209, 255, 0.3);
+        }
+
+        .double-border.light-green {
+            border-color: var(--lev-light-green);
+            box-shadow: 0 0 0 10px rgba(149, 221, 131, 0.3);
+        }
+
+        .double-border.blue {
+            border-color: var(--lev-blue);
+            box-shadow: 0 0 0 10px rgba(1, 91, 255, 0.3);
+        }
+
+        .double-border.salmon {
+            border-color: var(--lev-salmon);
+            box-shadow: 0 0 0 10px rgba(238, 132, 111, 0.3);
+        }
+
+        .double-border.purple {
+            border-color: var(--lev-purple);
+            box-shadow: 0 0 0 10px rgba(148, 50, 246, 0.3);
+        }
+
+        .double-border.background-white {
+            background-color: var(--white);
+        }
+
+        /* ========== HERO SECTION ========== */
+        /* ========== ANIMATIONS ========== */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero-section {
+            background-color: var(--lev-blue);
+            background-image: linear-gradient(135deg, var(--lev-blue) 0%, #0040cc 50%, var(--lev-blue) 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 15s ease infinite;
+            padding: 64px 5% 140px;
+            position: relative;
+            overflow-x: clip;
+        }
+
+        .hero-bg-wrapper {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .hero-bg-wrapper dotlottie-player {
+            width: 1920px;
+            flex: none;
+        }
+
+        .hero-intro {
+            text-align: center;
+            color: var(--white);
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Animated Divider */
+        .animated-divider {
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .animated-divider dotlottie-player {
+            flex: none;
+            width: 100%;
+            min-width: 1440px;
+        }
+
+        .hero-headline {
+            font-size: clamp(40px, 6vw, 80px);
+            margin-bottom: 24px;
+        }
+
+        .white-text {
+            color: var(--white);
+        }
+
+        .hero-cta-wrapper {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Pullquote */
+        .pullquote {
+            margin-top: 48px;
+            padding: 24px;
+        }
+
+        .pullquote-stars {
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .pullquote-stars svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--lev-yellow);
+        }
+
+        .pullquote-quote {
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        /* ========== HERO VIDEO ========== */
+        .hero-video-wrapper {
+            margin-top: 48px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-video-container {
+            position: relative;
+            border-radius: 1.75rem;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-video-container.double-border.light-blue {
+            background: transparent;
+        }
+
+        .hero-video {
+            width: 100%;
+            display: block;
+            border-radius: 1.25rem;
+        }
+
+        /* ========== HERO TESTIMONIALS ========== */
+        .hero-testimonials {
+            margin-top: 48px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-stats-bar {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 16px;
+            min-height: 70px;
+            position: relative;
+        }
+
+        .hero-stats-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 24px;
+        }
+
+        .hero-stat {
+            text-align: center;
+            position: absolute;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            pointer-events: none;
+        }
+
+        .hero-stat.active {
+            opacity: 1;
+            transform: translateY(0);
+            position: relative;
+            pointer-events: auto;
+        }
+
+        .hero-stat-number {
+            font-family: 'Sora', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--lev-yellow);
+        }
+
+        .hero-stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .hero-testimonial-strip {
+            display: flex;
+            gap: 32px;
+            margin-top: 24px;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            overflow: hidden;
+        }
+
+        .hero-quote {
+            flex: 1;
+            min-width: 0;
+            text-align: center;
+        }
+
+        .hero-quote .quote-text {
+            font-size: 14px;
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 6px;
+        }
+
+        .hero-quote .quote-text::before {
+            content: '\201C';
+            color: var(--lev-yellow);
+            font-size: 20px;
+            font-weight: 600;
+            font-style: normal;
+            margin-right: 2px;
+        }
+
+        .hero-quote .quote-text::after {
+            content: '\201D';
+            color: var(--lev-yellow);
+            font-size: 20px;
+            font-weight: 600;
+            font-style: normal;
+            margin-left: 2px;
+        }
+
+        .hero-quote .quote-author {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .see-more-link {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--lev-yellow);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .see-more-link:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 991px) {
+            .hero-testimonial-strip {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+        }
+
+        /* ========== FEATURES GRID ========== */
+        .home-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin: 48px 0;
+        }
+
+        .home-feature-wrapper {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .home-features-icon-wrapper {
+            margin-bottom: 16px;
+        }
+
+        .home-features-icon {
+            width: 80px;
+            height: 80px;
+        }
+
+        /* ========== TWO COLUMN FLEX ========== */
+        .two-column-flex-block {
+            display: flex;
+            gap: 64px;
+            align-items: center;
+            margin: 64px 0;
+        }
+
+        .two-column-flex-block.flipped {
+            flex-direction: row-reverse;
+        }
+
+        .flex-column {
+            flex: 1;
+        }
+
+        .flex-column-visuals {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Specialist headshots grid */
+        .specialists-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            max-width: 320px;
+        }
+
+        .specialist-headshot {
+            width: 140px;
+            height: 140px;
+            border-radius: 1.75rem;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white);
+        }
+
+        .specialist-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonials-masonry {
+            column-count: 3;
+            column-gap: 16px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 1rem;
+            padding: 24px;
+            position: relative;
+            transition: transform 0.2s;
+            break-inside: avoid;
+            margin-bottom: 16px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .testimonial-card .quote-mark {
+            font-family: 'Sriracha', cursive;
+            font-size: 48px;
+            line-height: 1;
+            position: absolute;
+            top: 12px;
+            left: 20px;
+            opacity: 0.12;
+        }
+
+        .testimonial-card.border-blue { border: 2px solid var(--lev-blue); }
+        .testimonial-card.border-light-blue { border: 2px solid var(--lev-light-blue); }
+        .testimonial-card.border-green { border: 2px solid var(--lev-light-green); }
+        .testimonial-card.border-salmon { border: 2px solid var(--lev-salmon); }
+        .testimonial-card.border-purple { border: 2px solid var(--lev-purple); }
+        .testimonial-card.border-yellow { border: 2px solid var(--lev-yellow); }
+
+        .testimonial-card.border-blue .quote-mark { color: var(--lev-blue); }
+        .testimonial-card.border-light-blue .quote-mark { color: var(--lev-light-blue); }
+        .testimonial-card.border-green .quote-mark { color: var(--lev-light-green); }
+        .testimonial-card.border-salmon .quote-mark { color: var(--lev-salmon); }
+        .testimonial-card.border-purple .quote-mark { color: var(--lev-purple); }
+        .testimonial-card.border-yellow .quote-mark { color: var(--lev-yellow); }
+
+        .testimonial-card .quote-text {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-card .quote-text strong {
+            color: var(--lev-dark-blue);
+            font-weight: 600;
+        }
+
+        .testimonial-card .attribution {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .testimonial-card .avatar {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            min-height: 40px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--white);
+        }
+
+        .testimonial-card.border-blue .avatar { background: var(--lev-blue); }
+        .testimonial-card.border-light-blue .avatar { background: var(--lev-light-blue); }
+        .testimonial-card.border-green .avatar { background: var(--lev-light-green); color: var(--black); }
+        .testimonial-card.border-salmon .avatar { background: var(--lev-salmon); }
+        .testimonial-card.border-purple .avatar { background: var(--lev-purple); }
+        .testimonial-card.border-yellow .avatar { background: var(--lev-yellow); color: var(--black); }
+
+        .testimonial-card .author-info strong {
+            display: block;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.3;
+        }
+
+        .testimonial-card .author-info span {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.2;
+            display: block;
+        }
+
+        .testimonial-card .industry-tag {
+            margin-left: auto;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .industry-tag.financial { background: #e3f2fd; color: #1565c0; }
+        .industry-tag.legal { background: #e8f5e9; color: #2e7d32; }
+        .industry-tag.nonprofit { background: #fce4ec; color: #c2185b; }
+        .industry-tag.insurance { background: #fff3e0; color: #e65100; }
+        .industry-tag.other { background: #f3e5f5; color: #7b1fa2; }
+
+        @media (max-width: 991px) {
+            .testimonials-masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .testimonials-masonry {
+                column-count: 1;
+            }
+        }
+
+        .testimonial-attribution {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* ========== STATS ROW ========== */
+        .stats-row {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin: 48px 0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(40px, 5vw, 56px);
+            font-weight: 700;
+            color: var(--lev-blue);
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        /* ========== PAIN POINTS ========== */
+        .pain-points-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .pain-point {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .pain-icon {
+            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            background: transparent;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pain-icon-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* ========== SOLUTION PILLARS ========== */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pillar-card {
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .pillar-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 20px;
+            background: var(--lev-blue);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .pillar-icon-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* ========== HOW IT WORKS ========== */
+        .steps-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, var(--lev-light-blue) 0%, var(--lev-blue) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Sora', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--white);
+            margin: 0 auto 20px;
+        }
+
+        /* ========== QUALIFIER SECTION ========== */
+        .qualifier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .qualifier-card {
+            padding: 32px;
+        }
+
+        .qualifier-card.for-you {
+            background-color: rgba(149, 221, 131, 0.1);
+            border: 2px solid var(--lev-light-green);
+        }
+
+        .qualifier-card.not-for-you {
+            background-color: rgba(234, 6, 6, 0.05);
+            border: 2px solid rgba(234, 6, 6, 0.3);
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        .checklist .icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .for-you .icon {
+            background: var(--lev-med-green);
+            color: var(--white);
+        }
+
+        .not-for-you .icon {
+            background: var(--lev-red);
+            color: var(--white);
+        }
+
+        /* ========== LEAD MAGNET ========== */
+        .lead-magnet-card {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 48px;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .email-form input {
+            flex: 1;
+            min-width: 250px;
+            padding: 16px 24px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: 'Lexend', sans-serif;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .email-form input:focus {
+            border-color: var(--lev-light-blue);
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cta-section {
+            background-color: var(--lev-blue);
+            background-image: linear-gradient(135deg, var(--lev-blue) 0%, #0040cc 50%, var(--lev-blue) 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 15s ease infinite;
+            padding: 96px 5%;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-divider {
+            position: absolute;
+            top: -300px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .cta-divider dotlottie-player {
+            flex: none;
+            width: 100%;
+            min-width: 1440px;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 24px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-testimonial {
+            max-width: 500px;
+            margin: 24px auto 0;
+            text-align: center;
+        }
+
+        .cta-stars {
+            font-size: 24px;
+            color: var(--lev-yellow);
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+        }
+
+        .cta-quote {
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 8px;
+            opacity: 0.95;
+        }
+
+        .cta-author {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .cta-demo-form {
+            max-width: 500px;
+            margin: 32px auto 24px;
+            background: var(--white);
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-demo-form .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .cta-demo-form input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Lexend', sans-serif;
+            font-size: 16px;
+            background: var(--white);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-demo-form input:focus {
+            outline: none;
+            border-color: var(--lev-light-blue);
+            box-shadow: 0 0 0 3px rgba(0, 209, 255, 0.15);
+        }
+
+        .cta-demo-form input::placeholder {
+            color: #999;
+        }
+
+        .cta-demo-form button {
+            width: 100%;
+            padding: 18px 32px;
+            font-size: 17px;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 500px) {
+            .cta-demo-form .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .social-count {
+            margin-top: 24px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* ========== AWARDS ========== */
+        .awards-wrapper {
+            margin-top: 64px;
+            padding-top: 48px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .awards-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .award-img {
+            height: 80px;
+            width: auto;
+        }
+
+        .award-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        /* ========== INTEGRATIONS ========== */
+        .integrations-section {
+            background: linear-gradient(135deg, var(--lev-dark-blue) 0%, #001a2e 100%);
+            padding: 80px 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .integrations-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(0, 209, 255, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(1, 91, 255, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .integrations-section h3 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .integrations-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .integration-logo-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .integration-logo-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .integration-logo {
+            max-width: 110px;
+            max-height: 36px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 600px) {
+            .integrations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background-color: var(--lev-dark-blue);
+            color: var(--white);
+            padding: 64px 5% 32px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Sora', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 48px auto 0;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        .footer-bottom a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        /* ========== INTEGRATIONS MARQUEE ========== */
+        .integrations-section {
+            background-color: var(--lev-dark-blue);
+            padding: 96px 5%;
+            overflow: hidden;
+        }
+
+        .integration-wrap {
+            display: flex;
+            gap: 24px;
+            animation: scroll 30s linear infinite;
+        }
+
+        .integration-card {
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 16px 32px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 150px;
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 991px) {
+            h1, .hero-headline { font-size: 56px; }
+            h2 { font-size: 40px; }
+            h3 { font-size: 28px; }
+
+            .two-column-flex-block,
+            .two-column-flex-block.flipped {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            h1, .hero-headline { font-size: 40px; }
+            h2 { font-size: 32px; }
+            h3 { font-size: 24px; }
+
+            .section {
+                padding: 64px 5%;
+            }
+
+            .hero-section {
+                padding: 48px 5% 64px;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .email-form input {
+                min-width: 100%;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .specialists-grid {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-section">
+        <!-- Animated Background -->
+        <div class="hero-bg-wrapper">
+            <dotlottie-player src="documents/home-hero-bg.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+        </div>
+
+        <div class="hero-intro">
+            <h1 class="hero-headline">Say Goodbye to <span class="emphasis-text yellow">DIY Marketing</span></h1>
+            <div class="white-text">
+                <p class="big-paragraph">Levitate is a dedicated marketing partner who knows your business<br><em>without</em> the cost of a full-time hire.</p>
+            </div>
+            <!-- Stats Bar -->
+            <div class="hero-stats-wrapper white-text">
+                <div class="hero-stats-bar">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="7939" data-suffix="+">0+</div>
+                        <div class="hero-stat-label">Businesses Trust Us</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="4.9" data-suffix="/5.0" data-decimals="1">0/5.0</div>
+                        <div class="hero-stat-label">Avg Customer Google Review Rating</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="119924" data-suffix="+">0+</div>
+                        <div class="hero-stat-label">Google Reviews Generated for Customers</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="1501">0</div>
+                        <div class="hero-stat-label">Websites Created</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="200" data-suffix="M+">0M+</div>
+                        <div class="hero-stat-label">Emails Sent</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="23481" data-suffix="+">0+</div>
+                        <div class="hero-stat-label">Blogs Posted</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="856385" data-suffix="+">0+</div>
+                        <div class="hero-stat-label">Social Posts</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-cta-wrapper">
+                <a href="#demo-form" class="btn-primary triple-shadow hero-cta">Book a Demo</a>
+            </div>
+
+            <!-- Testimonials Section -->
+            <div class="hero-testimonials white-text">
+                <!-- Testimonial Strip -->
+                <div class="hero-testimonial-strip">
+                    <div class="hero-quote">
+                        <p class="quote-text">It's like having your own marketing department for a fraction of the cost.</p>
+                        <span class="quote-author">Kevin I., Financial Services</span>
+                    </div>
+                    <div class="hero-quote">
+                        <p class="quote-text">The personal support we receive is unmatched.</p>
+                        <span class="quote-author">Patrick H., Nonprofit</span>
+                    </div>
+                    <div class="hero-quote">
+                        <p class="quote-text">Levitate keeps showing up as the tool that replaces the rest.</p>
+                        <span class="quote-author">G.C., Legal</span>
+                    </div>
+                </div>
+                <a href="#testimonials" class="see-more-link">See more reviews →</a>
+            </div>
+
+            <!-- Video Section -->
+            <div class="hero-video-wrapper">
+                <div class="hero-video-container double-border light-blue">
+                    <video class="hero-video" controls playsinline>
+                        <source src="levitate-video.mov" type="video/quicktime">
+                        <source src="levitate-video.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animated Divider -->
+        <div class="animated-divider">
+            <dotlottie-player src="documents/divider.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+        </div>
+    </section>
+
+    <!-- ========== PROBLEM SECTION ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="center">
+                <h2>Marketing shouldn't be your <span class="emphasis-text blue">second job</span></h2>
+                <p class="big-paragraph">You started a business to do what you love, not to become a marketing expert.</p>
+            </div>
+            <div class="mg-48px"></div>
+            <div class="pain-points-grid">
+                <div class="pain-point">
+                    <div class="pain-icon"><img src="icons/icon-reminder.png" alt="Reminder icon" class="pain-icon-img"></div>
+                    <div>
+                        <h4>The DIY Struggle</h4>
+                        <p>Posting inconsistently, sending random emails, hoping clients remember you when they need you again.</p>
+                    </div>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-icon"><img src="icons/icon-network.png" alt="Network icon" class="pain-icon-img"></div>
+                    <div>
+                        <h4>Tool Overload</h4>
+                        <p>Tried Mailchimp, Canva, scheduling tools... spent hours learning them and still no results.</p>
+                    </div>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-icon"><img src="icons/icon-piggybank.png" alt="Piggy bank icon" class="pain-icon-img"></div>
+                    <div>
+                        <h4>Budget Constraints</h4>
+                        <p>Too small to hire a full-time marketer ($60K+/year), but you know marketing matters.</p>
+                    </div>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-icon"><img src="icons/icon-frown.png" alt="Frown icon" class="pain-icon-img"></div>
+                    <div>
+                        <h4>Agency Burnout</h4>
+                        <p>Tried outsourcing to agencies who overpromised, underdelivered, and overcharged.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SOLUTION SECTION ========== -->
+    <section class="section" style="background-color: #f8fafc;">
+        <div class="container">
+            <div class="center">
+                <h2>Marketing done <em>with</em> you, by people who <span class="emphasis-text green">actually care</span></h2>
+                <p class="big-paragraph">Everything you need for scalable, authentic communication that drives your business.</p>
+            </div>
+            <div class="mg-48px"></div>
+            <div class="pillars-grid">
+                <div class="pillar-card double-border light-blue background-white">
+                    <div class="pillar-icon" style="background: linear-gradient(135deg, var(--lev-light-blue), var(--lev-blue));"><img src="icons/icon-globe-white.png" alt="Website icon" class="pillar-icon-img"></div>
+                    <h4>Dated site = lost clients</h4>
+                    <p>72% of people Google you first. We make sure you win the click with a modern, mobile-friendly site.</p>
+                </div>
+                <div class="pillar-card double-border light-green background-white">
+                    <div class="pillar-icon" style="background: linear-gradient(135deg, var(--lev-light-green), var(--lev-med-green));"><img src="icons/icon-megaphone-white.png" alt="Digital ads icon" class="pillar-icon-img"></div>
+                    <h4>Boosting posts isn't working</h4>
+                    <p>Real Meta + Google campaigns with strategy, targeting, and tracking. Not guesswork.</p>
+                </div>
+                <div class="pillar-card double-border salmon background-white">
+                    <div class="pillar-icon" style="background: var(--lev-salmon);"><img src="icons/icon-writing-white.png" alt="Content icon" class="pillar-icon-img"></div>
+                    <h4>Clients forget you exist</h4>
+                    <p>Email + social in your voice, sent consistently. You stay top-of-mind when they're ready to buy.</p>
+                </div>
+                <div class="pillar-card double-border purple background-white">
+                    <div class="pillar-icon" style="background: var(--lev-purple);"><img src="icons/icon-presenter-white.png" alt="Real humans icon" class="pillar-icon-img"></div>
+                    <h4>Agencies don't stick around</h4>
+                    <p>A dedicated strategist who learns your business and meets with you quarterly to keep things on track.</p>
+                </div>
+            </div>
+            <div class="mg-48px"></div>
+            <div class="center">
+                <p class="emphasis-text" style="font-size: 24px; color: var(--lev-blue);">"Not another tool to learn. Not another agency to manage. Just results."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== AUTHENTICITY SECTION ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="center">
+                <h2><span class="emphasis-text green">Authenticity</span> is the air we breathe</h2>
+            </div>
+            <div class="two-column-flex-block">
+                <div class="flex-column">
+                    <h3>Your Dedicated Success Specialist</h3>
+                    <p>Think of your success specialist as your own personal marketing guru, engagement ninja, and communications champ all wrapped up in one. They'll onboard your team, develop your strategy, and serve as an ongoing marketing resource, making engaging your network simpler than ever.</p>
+                </div>
+                <div class="flex-column">
+                    <div class="flex-column-visuals">
+                        <div class="specialists-grid">
+                            <div class="specialist-headshot double-border blue"><img src="icons/specialist-1.png" alt="Success Specialist" class="specialist-photo"></div>
+                            <div class="specialist-headshot double-border light-green"><img src="icons/specialist-2.png" alt="Success Specialist" class="specialist-photo"></div>
+                            <div class="specialist-headshot double-border purple"><img src="icons/specialist-3.png" alt="Success Specialist" class="specialist-photo"></div>
+                            <div class="specialist-headshot double-border salmon"><img src="icons/specialist-4.png" alt="Success Specialist" class="specialist-photo"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="two-column-flex-block flipped">
+                <div class="flex-column">
+                    <h3>Real Results</h3>
+                    <p>We believe in data-driven insights. Our data proves that Levitate's people, strategies, and features deliver measurable improvements for our customers, backed by hundreds of 5-star reviews.</p>
+                </div>
+                <div class="flex-column">
+                    <div class="stats-row">
+                        <div class="stat">
+                            <div class="stat-number">47%</div>
+                            <div class="stat-label">More policy renewals</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">34%</div>
+                            <div class="stat-label">More referrals</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">28%</div>
+                            <div class="stat-label">Higher retention</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <div class="center">
+                <h2>Our customers <span class="emphasis-text red">love</span> us</h2>
+                <p class="big-paragraph">We could brag, but we'd rather let our customers speak for us.</p>
+            </div>
+            <div class="mg-32px"></div>
+            <div class="testimonials-masonry">
+                <div class="testimonial-card border-blue">
+                                        <p class="quote-text">"As a staff of one, having Levitate as a creative partner has been a <strong>game-changer</strong>! I have a dedicated support person who helps brainstorm and bring my ideas to life."</p>
+                    <div class="attribution">
+                        <div class="avatar">JM</div>
+                        <div class="author-info">
+                            <strong>Julie M.</strong>
+                            <span>Executive Director</span>
+                        </div>
+                        <span class="industry-tag nonprofit">Nonprofit</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-salmon">
+                                        <p class="quote-text">"It's worth every penny. It's like having your own <strong>marketing department for a fraction of the cost</strong>."</p>
+                    <div class="attribution">
+                        <div class="avatar">KI</div>
+                        <div class="author-info">
+                            <strong>Kevin I.</strong>
+                            <span>Owner & Managing Director</span>
+                        </div>
+                        <span class="industry-tag financial">Financial</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-green">
+                                        <p class="quote-text">"There's not a single thing we've thought of that Levitate wasn't <strong>already a step ahead on</strong>."</p>
+                    <div class="attribution">
+                        <div class="avatar">JC</div>
+                        <div class="author-info">
+                            <strong>Jill C.</strong>
+                            <span>Onboarding Specialist</span>
+                        </div>
+                        <span class="industry-tag legal">Legal</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-light-blue">
+                                        <p class="quote-text">"The <strong>personal support</strong> we receive is unmatched. I never had that with our previous service."</p>
+                    <div class="attribution">
+                        <div class="avatar">PH</div>
+                        <div class="author-info">
+                            <strong>Patrick H.</strong>
+                            <span>Fundraising Coordinator</span>
+                        </div>
+                        <span class="industry-tag nonprofit">Nonprofit</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-purple">
+                                        <p class="quote-text">"Levitate makes it easier for me to <strong>organize our communications</strong> and marketing efforts ahead of time."</p>
+                    <div class="attribution">
+                        <div class="avatar">AJ</div>
+                        <div class="author-info">
+                            <strong>April J.</strong>
+                            <span>Managing Partner</span>
+                        </div>
+                        <span class="industry-tag insurance">Insurance</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-yellow">
+                                        <p class="quote-text">"Levitate allowed us to <strong>stay connected with our clients</strong> and ensure they were being well taken care of."</p>
+                    <div class="attribution">
+                        <div class="avatar">TW</div>
+                        <div class="author-info">
+                            <strong>Tina W.</strong>
+                            <span>Agent</span>
+                        </div>
+                        <span class="industry-tag insurance">Insurance</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-salmon">
+                                        <p class="quote-text">"Levitate is <strong>near effortless</strong> to keep up with client interaction!"</p>
+                    <div class="attribution">
+                        <div class="avatar">AP</div>
+                        <div class="author-info">
+                            <strong>Adam P.</strong>
+                            <span>CFO</span>
+                        </div>
+                        <span class="industry-tag financial">Financial</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-blue">
+                                        <p class="quote-text">"Levitate <strong>takes the guesswork out</strong> of what emails people will open."</p>
+                    <div class="attribution">
+                        <div class="avatar">RL</div>
+                        <div class="author-info">
+                            <strong>Rachel L.</strong>
+                            <span>Office Manager</span>
+                        </div>
+                        <span class="industry-tag financial">Financial</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-green">
+                                        <p class="quote-text">"Levitate helped us <strong>think through the entire quarter</strong>. It forced us to get organized."</p>
+                    <div class="attribution">
+                        <div class="avatar">RV</div>
+                        <div class="author-info">
+                            <strong>Richard V.</strong>
+                            <span>Executive Director</span>
+                        </div>
+                        <span class="industry-tag nonprofit">Nonprofit</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-light-blue">
+                                        <p class="quote-text">"I'm constantly reviewing my tech stack. Levitate keeps showing up as <strong>the tool that replaces the rest</strong>."</p>
+                    <div class="attribution">
+                        <div class="avatar">GC</div>
+                        <div class="author-info">
+                            <strong>G.C.</strong>
+                            <span>CEO</span>
+                        </div>
+                        <span class="industry-tag legal">Legal</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-purple">
+                                        <p class="quote-text">"Levitate implemented AI so quickly. That <strong>mindset of growth + adaptation</strong> matters to me as a business owner."</p>
+                    <div class="attribution">
+                        <div class="avatar">GC</div>
+                        <div class="author-info">
+                            <strong>G.C.</strong>
+                            <span>CEO</span>
+                        </div>
+                        <span class="industry-tag legal">Legal</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-yellow">
+                                        <p class="quote-text">"Levitate is a company of <strong>real people helping small businesses thrive</strong>."</p>
+                    <div class="attribution">
+                        <div class="avatar">AC</div>
+                        <div class="author-info">
+                            <strong>Amanda C.</strong>
+                            <span>Owner</span>
+                        </div>
+                        <span class="industry-tag other">Business</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-salmon">
+                                        <p class="quote-text">"Half of the overall experience with Levitate has everything to do with our <strong>account specialist</strong>. They believe in what they're supporting."</p>
+                    <div class="attribution">
+                        <div class="avatar">JP</div>
+                        <div class="author-info">
+                            <strong>Jannie P.</strong>
+                            <span>Executive Administrator</span>
+                        </div>
+                        <span class="industry-tag nonprofit">Nonprofit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS SECTION ========== -->
+    <section class="section" style="background-color: var(--lev-dark-blue); color: var(--white);">
+        <div class="container">
+            <div class="center white-text">
+                <h2>Getting started takes <span class="emphasis-text yellow">15 minutes</span></h2>
+            </div>
+            <div class="mg-48px"></div>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Tell Us About Your Business</h4>
+                    <p>A quick intake call or form to learn your goals, audience, and what makes you different.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>We Build Your Marketing Plan</h4>
+                    <p>Custom strategy based on your industry, your clients, and what actually works.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>We Execute, You Stay Connected</h4>
+                    <p>Monthly campaigns run automatically. Quarterly check-ins keep your strategy fresh. You focus on your business while we keep you top-of-mind.</p>
+                </div>
+            </div>
+            <div class="mg-48px"></div>
+            <div class="center">
+                <div class="double-border light-blue" style="display: inline-block; padding: 24px 48px; background: transparent;">
+                    <strong>One meeting a quarter. Hundreds of hours saved. Real results.</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== QUALIFIER SECTION ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="center">
+                <h2>Is this <span class="emphasis-text blue">for you?</span></h2>
+            </div>
+            <div class="mg-48px"></div>
+            <div class="qualifier-grid">
+                <div class="qualifier-card for-you" style="border-radius: 1.75rem;">
+                    <h4 style="color: var(--lev-med-green);">This Is For You If...</h4>
+                    <ul class="checklist">
+                        <li><span class="icon">✓</span> You're a small business (1-25 employees)</li>
+                        <li><span class="icon">✓</span> You don't have a dedicated marketing team</li>
+                        <li><span class="icon">✓</span> Referrals and repeat business drive your success</li>
+                        <li><span class="icon">✓</span> You've tried DIY marketing and it didn't stick</li>
+                        <li><span class="icon">✓</span> You can invest 1-2 hours per quarter to meet with your Success Specialist</li>
+                    </ul>
+                </div>
+                <div class="qualifier-card not-for-you" style="border-radius: 1.75rem;">
+                    <h4 style="color: var(--lev-red);">This Isn't For You If...</h4>
+                    <ul class="checklist">
+                        <li><span class="icon">✕</span> You're a large enterprise (100+ employees)</li>
+                        <li><span class="icon">✕</span> You have an in-house marketing team</li>
+                        <li><span class="icon">✕</span> You want to manage everything yourself</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LEAD MAGNET SECTION ========== -->
+    <section class="section" style="background-color: #f8fafc;">
+        <div class="container">
+            <div class="center">
+                <h2>Not ready to talk? <span class="emphasis-text blue">Start here.</span></h2>
+                <p class="big-paragraph">Get your free marketing health check and see where you might be leaving money on the table.</p>
+            </div>
+            <div class="mg-32px"></div>
+            <div class="lead-magnet-card double-border light-blue background-white">
+                <div class="center">
+                    <h4 style="color: var(--lev-blue);">Free Marketing Health Check</h4>
+                    <p>5-minute assessment that analyzes your online presence and shows exactly what's working and what's not.</p>
+                    <div class="mg-16px"></div>
+                    <form class="email-form">
+                        <input type="email" placeholder="Enter your email address">
+                        <button type="submit" class="btn-primary">Get My Free Report</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FINAL CTA SECTION ========== -->
+    <section class="cta-section">
+        <!-- CTA Animated Divider -->
+        <div class="cta-divider">
+            <dotlottie-player src="documents/cta-divider.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+        </div>
+
+        <div class="container">
+            <h2>Ready to say goodbye to <span class="emphasis-text yellow">DIY?</span></h2>
+            <p>Join thousands of small businesses who stopped struggling with marketing and started growing.</p>
+
+            <form id="demo-form" class="cta-demo-form">
+                <div class="form-grid">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Work email" required>
+                    <input type="text" name="company" placeholder="Company name" required>
+                    <input type="tel" name="phone" placeholder="Phone number">
+                </div>
+                <button type="submit" class="btn-primary">Book My Demo</button>
+            </form>
+            <p class="social-count">Join 300+ businesses who joined this month</p>
+
+            <div class="cta-testimonial">
+                <div class="cta-stars">★★★★★</div>
+                <p class="cta-quote">"It's like having your own marketing department for a fraction of the cost."</p>
+                <span class="cta-author">— Kevin I., Financial Services</span>
+            </div>
+
+            <div class="awards-wrapper">
+                <div class="awards-group">
+                    <img src="images/award-inc5000.svg" alt="Inc. 5000" class="award-img">
+                    <img src="images/award-workplace.svg" alt="USA Today Top Workplace" class="award-img">
+                    <img src="images/award-g2-leader.svg" alt="G2 Momentum Leader" class="award-img">
+                    <img src="images/award-users-love-us.svg" alt="Users Love Us" class="award-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INTEGRATIONS SECTION ========== -->
+    <section class="integrations-section">
+        <div class="container center">
+            <h3 class="white-text" style="margin-bottom: 8px;">Integrates with tools you already use</h3>
+            <p class="white-text" style="opacity: 0.8; margin-bottom: 32px;">Connect Levitate to your existing workflow</p>
+            <div class="integrations-grid">
+                <div class="integration-logo-card"><img src="images/logo-salesforce.svg" alt="Salesforce" class="integration-logo"></div>
+                <div class="integration-logo-card"><img src="images/logo-zapier.png" alt="Zapier" class="integration-logo" style="max-width: 140px; max-height: 50px;"></div>
+                <div class="integration-logo-card"><img src="images/logo-gmail.svg" alt="Gmail" class="integration-logo"></div>
+                <div class="integration-logo-card"><img src="images/logo-outlook.svg" alt="Outlook" class="integration-logo"></div>
+                <div class="integration-logo-card"><img src="images/logo-office365.svg" alt="Office 365" class="integration-logo"></div>
+                <div class="integration-logo-card"><img src="images/logo-clio.png" alt="Clio" class="integration-logo"></div>
+                <div class="integration-logo-card"><img src="images/logo-wealthbox.svg" alt="Wealthbox" class="integration-logo"></div>
+                <div class="integration-logo-card"><img src="images/logo-redtail.svg" alt="Redtail" class="integration-logo"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Levitate</div>
+            <div class="footer-links">
+                <a href="#">Features</a>
+                <a href="#">Plans</a>
+                <a href="#">Testimonials</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2025 Real Magic</span>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <!-- Count-up Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('[data-count]');
+            const duration = 2000; // Animation duration in ms
+            const delay = 300; // Delay before starting
+
+            function easeOutQuart(t) {
+                return 1 - Math.pow(1 - t, 4);
+            }
+
+            function formatNumber(num, decimals) {
+                if (decimals > 0) {
+                    return num.toFixed(decimals);
+                }
+                return Math.floor(num).toLocaleString();
+            }
+
+            function animateCounter(el) {
+                const target = parseFloat(el.dataset.count);
+                const suffix = el.dataset.suffix || '';
+                const decimals = parseInt(el.dataset.decimals) || 0;
+                const startTime = performance.now();
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easedProgress = easeOutQuart(progress);
+                    const current = easedProgress * target;
+
+                    el.textContent = formatNumber(current, decimals) + suffix;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+
+                requestAnimationFrame(update);
+            }
+
+            // Use Intersection Observer to trigger when stats come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            animateCounter(entry.target);
+                        }, delay);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(counter => observer.observe(counter));
+
+            // Stats Carousel - show one stat at a time
+            const statsBar = document.querySelector('.hero-stats-bar');
+            const stats = document.querySelectorAll('.hero-stat');
+            let currentStat = 0;
+            const displayDuration = 3500; // 3.5 seconds per stat
+
+            function showStat(index) {
+                // Hide all stats
+                stats.forEach(stat => stat.classList.remove('active'));
+
+                // Show current stat
+                stats[index].classList.add('active');
+
+                // Trigger count animation for this stat (restart every time)
+                const counter = stats[index].querySelector('[data-count]');
+                if (counter) {
+                    // Reset to initial value
+                    const suffix = counter.dataset.suffix || '';
+                    counter.textContent = '0' + suffix;
+                    // Animate
+                    animateCounter(counter);
+                }
+            }
+
+            function nextStat() {
+                currentStat = (currentStat + 1) % stats.length;
+                showStat(currentStat);
+            }
+
+            // Initialize first stat
+            if (stats.length > 0) {
+                showStat(0);
+                // Start carousel
+                setInterval(nextStat, displayDuration);
+            }
+        });
+    </script>
+
+</body>
+</html>
