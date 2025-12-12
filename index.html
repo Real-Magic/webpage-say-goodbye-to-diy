@@ -1955,6 +1955,17 @@
             return match ? match[1] : '';
         }
 
+        // Get user IP address
+        async function getIpAddress() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                return data.ip;
+            } catch (error) {
+                return '';
+            }
+        }
+
         // Demo form handler
         const demoForm = document.getElementById('demo-form');
         if (demoForm) {
@@ -1980,6 +1991,9 @@
                 const firstName = nameParts[0] || '';
                 const lastName = nameParts.slice(1).join(' ') || '';
 
+                // Get IP address
+                const ipAddress = await getIpAddress();
+
                 try {
                     await fetch(ZAPIER_WEBHOOK, {
                         method: 'POST',
@@ -1993,6 +2007,7 @@
                             company: data.company,
                             phone: data.phone,
                             hutk: getHutk(),
+                            ip_address: ipAddress,
                             ...getPageInfo(),
                             ...getUrlParams()
                         })
@@ -2034,6 +2049,9 @@
                 btn.textContent = 'Sending...';
                 btn.disabled = true;
 
+                // Get IP address
+                const ipAddress = await getIpAddress();
+
                 try {
                     await fetch(ZAPIER_WEBHOOK, {
                         method: 'POST',
@@ -2043,6 +2061,7 @@
                             form: 'lead_magnet',
                             email: data.email,
                             hutk: getHutk(),
+                            ip_address: ipAddress,
                             ...getPageInfo(),
                             ...getUrlParams()
                         })
