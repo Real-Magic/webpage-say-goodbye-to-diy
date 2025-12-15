@@ -1953,10 +1953,11 @@
             <form id="demo-form" class="cta-demo-form">
                 <input type="text" name="department" style="position: absolute; left: -9999px;" tabindex="-1" autocomplete="off">
                 <div class="form-grid">
-                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="text" name="firstName" placeholder="First name" required>
+                    <input type="text" name="lastName" placeholder="Last name" required>
                     <input type="email" name="email" placeholder="Work email" required>
-                    <input type="text" name="company" placeholder="Company name" required>
                     <input type="tel" name="phone" placeholder="Phone number">
+                    <input type="text" name="company" placeholder="Business name" required style="grid-column: 1 / -1;">
                 </div>
                 <button type="submit" class="btn-primary">Book My Demo</button>
                 <p class="privacy-notice">We will handle your contact details in line with our <a href="https://www.levitate.ai/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.</p>
@@ -2161,10 +2162,8 @@
                 btn.textContent = 'Sending...';
                 btn.disabled = true;
 
-                // Split name into first and last
-                const nameParts = data.name.trim().split(/\s+/);
-                const firstName = nameParts[0] || '';
-                const lastName = nameParts.slice(1).join(' ') || '';
+                const firstName = data.firstName.trim();
+                const lastName = data.lastName.trim();
 
                 // Get IP address
                 const ipAddress = await getIpAddress();
