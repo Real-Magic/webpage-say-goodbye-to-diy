@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a single-page marketing landing page for Levitate's "Say Goodbye to DIY Marketing" campaign. The site is built with vanilla HTML, CSS, and JavaScript - no build tools or framework dependencies.
 
-**Live URL**: https://say-goodbye.levitate.ai (configured via CNAME)
+**Live URL**: https://www.saygoodbyetodiy.com (configured via CNAME)
 
 ## Architecture
 
@@ -33,11 +33,13 @@ The CSS uses a custom design system with CSS variables defined in `:root`:
 ### JavaScript Features
 1. **Count-up animations**: Stats animate on scroll using Intersection Observer
 2. **Stats carousel**: Hero section rotates through 7 different statistics every 3.5 seconds
-3. **Form handling**: Two forms submit to Zapier webhook
-   - Demo form (with name, email, company, phone)
-   - Email lead magnet form
-   - Both include honeypot field (`department`) for bot prevention
+3. **Form handling**: Three forms with different destinations:
+   - **Demo form** (name, email, company, phone) → Zapier webhook
+   - **Email lead magnet form** → Zapier webhook
+   - **Health Check form** (business autocomplete) → Redirects to levitate.ai/getmyscore with place_id
+   - Zapier forms include honeypot field (`department`) for bot prevention
    - Captures UTM parameters, page info, HubSpot user token (hutk), and IP address
+4. **Business autocomplete**: Health Check form uses GetMyScore API for Google Places business search
 
 ### Asset Structure
 ```
@@ -67,7 +69,7 @@ npx serve .
 ### Deployment
 This repository uses GitHub Pages:
 1. Push to `main` branch
-2. GitHub Pages automatically deploys to https://say-goodbye.levitate.ai
+2. GitHub Pages automatically deploys to https://www.saygoodbyetodiy.com
 3. CNAME file configures custom domain
 
 **Deployment command**: `git push origin main`
@@ -75,15 +77,18 @@ This repository uses GitHub Pages:
 ## Key Implementation Patterns
 
 ### Form Submissions
-Forms POST to: `https://hooks.zapier.com/hooks/catch/11261250/ufclj1v/`
+**Zapier webhook** (Demo & Email forms): `https://hooks.zapier.com/hooks/catch/11261250/ufclj1v/`
 
-Each submission includes:
+Each Zapier submission includes:
 - Form data (email, name, company, phone)
 - UTM tracking parameters from URL
 - HubSpot user token from cookies
 - User IP address (fetched from ipify.org)
 - Page metadata (URL, title, ID)
 - Timestamp
+
+**Health Check form** redirects to: `https://www.levitate.ai/getmyscore?place_id={placeId}&auto=true`
+- Uses business autocomplete API: `https://simple-online-health-form.vercel.app/api/autocomplete-business`
 
 ### Animations
 Lottie animations are loaded via:
