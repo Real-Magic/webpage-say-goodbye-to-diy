@@ -9,6 +9,9 @@
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://js.hs-scripts.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&family=Sriracha&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&family=Sriracha&display=swap"></noscript>
 
@@ -224,6 +227,9 @@
             );
             background-size: 200% 100%;
             animation: shimmer 3s ease-in-out infinite;
+            /* Prevent layout shift from font loading */
+            min-height: 58px;
+            min-width: 200px;
             color: var(--lev-dark-blue);
             font-size: 18px;
             padding: 20px 48px;
@@ -522,6 +528,7 @@
             align-items: center;
             margin-bottom: 16px;
             min-height: 70px;
+            min-width: 400px;
             position: relative;
         }
 
@@ -1748,7 +1755,7 @@
             <!-- Video Section -->
             <div class="hero-video-wrapper">
                 <div class="hero-video-container double-border light-blue">
-                    <video class="hero-video" autoplay muted loop playsinline controls poster="images/video-poster.jpg">
+                    <video class="hero-video" autoplay muted loop playsinline controls poster="images/video-poster.jpg" preload="metadata">
                         <source src="levitate-video.mp4" type="video/mp4">
                         <track kind="captions" src="captions.vtt" srclang="en" label="English">
                         Your browser does not support the video tag.
@@ -1774,28 +1781,28 @@
             <div class="mg-48px"></div>
             <div class="pain-points-grid">
                 <div class="pain-point">
-                    <div class="pain-icon"><img src="icons/icon-reminder.png" alt="Reminder icon" class="pain-icon-img" width="64" height="64"></div>
+                    <div class="pain-icon"><picture><source srcset="icons/icon-reminder.webp" type="image/webp"><img src="icons/icon-reminder.png" alt="Reminder icon" class="pain-icon-img" width="64" height="64"></picture></div>
                     <div>
                         <h2 class="h4-size">The DIY Struggle</h2>
                         <p>Posting inconsistently, sending random emails, hoping clients remember you when they need you again.</p>
                     </div>
                 </div>
                 <div class="pain-point">
-                    <div class="pain-icon"><img src="icons/icon-network.png" alt="Network icon" class="pain-icon-img" width="64" height="64"></div>
+                    <div class="pain-icon"><picture><source srcset="icons/icon-network.webp" type="image/webp"><img src="icons/icon-network.png" alt="Network icon" class="pain-icon-img" width="64" height="64"></picture></div>
                     <div>
                         <h2 class="h4-size">Tool Overload</h2>
                         <p>Tried Mailchimp, Canva, scheduling tools... spent hours learning them and still no results.</p>
                     </div>
                 </div>
                 <div class="pain-point">
-                    <div class="pain-icon"><img src="icons/icon-piggybank.png" alt="Piggy bank icon" class="pain-icon-img" width="64" height="64"></div>
+                    <div class="pain-icon"><picture><source srcset="icons/icon-piggybank.webp" type="image/webp"><img src="icons/icon-piggybank.png" alt="Piggy bank icon" class="pain-icon-img" width="64" height="64"></picture></div>
                     <div>
                         <h2 class="h4-size">Budget Constraints</h2>
                         <p>Too small to hire a full-time marketer ($60K+/year), but you know marketing matters.</p>
                     </div>
                 </div>
                 <div class="pain-point">
-                    <div class="pain-icon"><img src="icons/icon-frown.png" alt="Frown icon" class="pain-icon-img" width="64" height="64"></div>
+                    <div class="pain-icon"><picture><source srcset="icons/icon-frown.webp" type="image/webp"><img src="icons/icon-frown.png" alt="Frown icon" class="pain-icon-img" width="64" height="64"></picture></div>
                     <div>
                         <h2 class="h4-size">Agency Burnout</h2>
                         <p>Tried outsourcing to agencies who overpromised, underdelivered, and overcharged.</p>
@@ -1815,22 +1822,22 @@
             <div class="mg-48px"></div>
             <div class="pillars-grid">
                 <div class="pillar-card double-border light-blue background-white">
-                    <div class="pillar-icon" style="background: linear-gradient(135deg, var(--lev-light-blue), var(--lev-blue));"><img src="icons/icon-globe-white.png" alt="Website icon" class="pillar-icon-img" width="40" height="40"></div>
+                    <div class="pillar-icon" style="background: linear-gradient(135deg, var(--lev-light-blue), var(--lev-blue));"><picture><source srcset="icons/icon-globe-white.webp" type="image/webp"><img src="icons/icon-globe-white.png" alt="Website icon" class="pillar-icon-img" width="40" height="40"></picture></div>
                     <h2 class="h4-size">Dated website = lost clients</h2>
                     <p>72% of people Google you first. We make sure you win the click with a modern, mobile-friendly website.</p>
                 </div>
                 <div class="pillar-card double-border light-green background-white">
-                    <div class="pillar-icon" style="background: linear-gradient(135deg, var(--lev-light-green), var(--lev-med-green));"><img src="icons/icon-megaphone-white.png" alt="Digital ads icon" class="pillar-icon-img" width="40" height="40"></div>
+                    <div class="pillar-icon" style="background: linear-gradient(135deg, var(--lev-light-green), var(--lev-med-green));"><picture><source srcset="icons/icon-megaphone-white.webp" type="image/webp"><img src="icons/icon-megaphone-white.png" alt="Digital ads icon" class="pillar-icon-img" width="40" height="40"></picture></div>
                     <h2 class="h4-size">Boosting posts isn't working</h2>
                     <p>Real Meta + Google campaigns with strategy, targeting, and tracking. Not guesswork.</p>
                 </div>
                 <div class="pillar-card double-border salmon background-white">
-                    <div class="pillar-icon" style="background: var(--lev-salmon);"><img src="icons/icon-writing-white.png" alt="Content icon" class="pillar-icon-img" width="40" height="40"></div>
+                    <div class="pillar-icon" style="background: var(--lev-salmon);"><picture><source srcset="icons/icon-writing-white.webp" type="image/webp"><img src="icons/icon-writing-white.png" alt="Content icon" class="pillar-icon-img" width="40" height="40"></picture></div>
                     <h2 class="h4-size">Clients forget you exist</h2>
                     <p>Email + social in your voice, sent consistently. You stay top-of-mind when they're ready to buy.</p>
                 </div>
                 <div class="pillar-card double-border purple background-white">
-                    <div class="pillar-icon" style="background: var(--lev-purple);"><img src="icons/icon-presenter-white.png" alt="Real humans icon" class="pillar-icon-img" width="40" height="40"></div>
+                    <div class="pillar-icon" style="background: var(--lev-purple);"><picture><source srcset="icons/icon-presenter-white.webp" type="image/webp"><img src="icons/icon-presenter-white.png" alt="Real humans icon" class="pillar-icon-img" width="40" height="40"></picture></div>
                     <h2 class="h4-size">Agencies don't stick around</h2>
                     <p>A dedicated strategist who learns your business and meets with you quarterly to keep things on track.</p>
                 </div>
