@@ -2367,9 +2367,6 @@
                 btn.textContent = 'Sending...';
                 btn.disabled = true;
 
-                const firstName = data.firstName.trim();
-                const lastName = data.lastName.trim();
-
                 // Get IP address
                 const ipAddress = await getIpAddress();
 
@@ -2380,8 +2377,6 @@
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
                             form: 'demo',
-                            first_name: firstName,
-                            last_name: lastName,
                             email: data.email,
                             company: data.company,
                             phone: data.phone,
