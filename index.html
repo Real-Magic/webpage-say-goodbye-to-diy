@@ -1186,14 +1186,16 @@
         .cta-demo-form .privacy-notice {
             margin-top: 12px;
             font-size: 13px;
-            color: #666;
+            color: #00243d;
             text-align: center;
             line-height: 1.5;
+            opacity: 0.8;
         }
 
         .cta-demo-form .privacy-notice a {
-            color: var(--lev-blue);
+            color: #015bff;
             text-decoration: underline;
+            opacity: 1;
         }
 
         .cta-demo-form .privacy-notice a:hover {
@@ -1334,17 +1336,28 @@
             margin: 32px auto 24px;
             background: var(--white);
             padding: 32px 32px 12px;
-            border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+            border-radius: 1.75rem;
+            border: 0.25rem solid #ffcd19;
+            box-shadow: 0 0 0 10px rgba(0, 209, 255, 0.3);
         }
 
         .cta-demo-form .form-title {
             font-family: 'Sora', sans-serif;
             font-size: 20px;
             font-weight: 600;
-            color: #1a1a1a;
-            margin: 0 0 20px 0;
+            color: #015bff;
+            margin: 0 0 32px 0;
             text-align: left;
+        }
+
+        .cta-demo-form .form-title .underlined-text::after {
+            bottom: -15px;
+            height: 16px;
+            background-image: url('icons/underlines/underline-3.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            filter: brightness(0) saturate(100%) invert(79%) sepia(82%) saturate(1392%) hue-rotate(359deg) brightness(103%) contrast(103%);
         }
 
         .cta-demo-form .form-grid {
@@ -1356,7 +1369,7 @@
         .cta-demo-form input {
             width: 100%;
             padding: 16px 20px;
-            border: 1px solid #e0e0e0;
+            border: 2px solid #00d1ff;
             border-radius: 8px;
             font-family: 'Lexend', sans-serif;
             font-size: 16px;
@@ -1366,8 +1379,8 @@
 
         .cta-demo-form input:focus {
             outline: none;
-            border-color: var(--lev-light-blue);
-            box-shadow: 0 0 0 3px rgba(0, 209, 255, 0.15);
+            border-color: #015bff;
+            box-shadow: 0 0 0 3px rgba(1, 91, 255, 0.15);
         }
 
         .cta-demo-form input::placeholder {
@@ -1386,7 +1399,7 @@
             display: block;
             font-size: 13px;
             font-weight: 600;
-            color: #333;
+            color: #00243d;
             margin-bottom: 6px;
         }
 
@@ -1735,7 +1748,26 @@
             </div>
 
             <div class="hero-cta-wrapper">
-                <a href="#demo-form" class="btn-primary triple-shadow hero-cta">Get a Free Demo</a>
+                <form id="demo-form" class="cta-demo-form">
+                    <h3 class="form-title">Book your <span class="underlined-text">free demo</span></h3>
+                    <input type="text" name="department" style="position: absolute; left: -9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="demo-email">Email</label>
+                            <input type="email" id="demo-email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="demo-phone">Phone</label>
+                            <input type="tel" id="demo-phone" name="phone" placeholder="Phone" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="demo-company">Business name</label>
+                            <input type="text" id="demo-company" name="company" placeholder="Your business name" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Get a Free Demo</button>
+                    <p class="privacy-notice">We will handle your contact details in line with our <a href="https://www.levitate.ai/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.</p>
+                </form>
             </div>
 
             <!-- Testimonials Section -->
@@ -1756,17 +1788,6 @@
                     </div>
                 </div>
                 <a href="#testimonials" class="see-more-link">See more reviews →</a>
-            </div>
-
-            <!-- Video Section -->
-            <div class="hero-video-wrapper">
-                <div class="hero-video-container double-border light-blue">
-                    <video class="hero-video" autoplay muted loop playsinline controls poster="images/video-poster.jpg" preload="metadata">
-                        <source src="levitate-video.mp4" type="video/mp4">
-                        <track kind="captions" src="captions.vtt" srclang="en" label="English">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
             </div>
         </div>
 
@@ -1813,6 +1834,17 @@
                         <h2 class="h4-size">Agency Burnout</h2>
                         <p>Tried outsourcing to agencies who overpromised, underdelivered, and overcharged.</p>
                     </div>
+                </div>
+            </div>
+            <div class="mg-48px"></div>
+            <!-- Video Section -->
+            <div class="hero-video-wrapper">
+                <div class="hero-video-container double-border light-blue">
+                    <video class="hero-video" autoplay muted loop playsinline controls poster="images/video-poster.jpg" preload="metadata">
+                        <source src="levitate-video.mp4" type="video/mp4">
+                        <track kind="captions" src="captions.vtt" srclang="en" label="English">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
@@ -2068,11 +2100,6 @@
         </div>
     </section>
 
-    <!-- ========== MID-PAGE CTA ========== -->
-    <div class="mid-page-cta">
-        <a href="#demo-form" class="btn-primary triple-shadow">Ready to Get Started? Book a Free Demo</a>
-    </div>
-
     <!-- ========== HOW IT WORKS SECTION ========== -->
     <section class="section" style="background-color: var(--lev-dark-blue); color: var(--white);">
         <div class="container">
@@ -2133,55 +2160,9 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- ========== FINAL CTA SECTION ========== -->
-    <section class="cta-section">
-        <!-- CTA Animated Divider -->
-        <div class="cta-divider">
-            <dotlottie-player src="documents/cta-divider.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
-        </div>
-
-        <div class="container">
-            <h2>Ready to say goodbye to <span class="emphasis-text yellow">DIY?</span></h2>
-            <p>Join thousands of small businesses who stopped struggling with marketing and started growing.</p>
-
-            <div class="demo-expectations">
-                <p class="demo-expectations-heading">On your personalized demo, you'll see:</p>
-                <ul>
-                    <li>An audit of your current online presence</li>
-                    <li>Your competitors' marketing (and how to beat them)</li>
-                    <li>Keep-in-touch strategies tailored to your industry</li>
-                </ul>
-            </div>
-
-            <form id="demo-form" class="cta-demo-form">
-                <h3 class="form-title">Book your free demo</h3>
-                <input type="text" name="department" style="position: absolute; left: -9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="demo-email">Email</label>
-                        <input type="email" id="demo-email" name="email" placeholder="Email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="demo-phone">Phone</label>
-                        <input type="tel" id="demo-phone" name="phone" placeholder="Phone" required>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="demo-company">Business name</label>
-                        <input type="text" id="demo-company" name="company" placeholder="Your business name" required>
-                    </div>
-                </div>
-                <button type="submit" class="btn-primary">Get a Free Demo</button>
-                <p class="privacy-notice">We will handle your contact details in line with our <a href="https://www.levitate.ai/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.</p>
-            </form>
-            <p class="social-count">See why 300+ businesses sign up each month</p>
-
-            <div class="cta-testimonial">
-                <div class="cta-stars">★★★★★</div>
-                <p class="cta-quote">"It's like having your own marketing department for a fraction of the cost."</p>
-                <span class="cta-author">— Kevin I., Financial Services</span>
+            <div class="mg-48px"></div>
+            <div class="center">
+                <a href="#demo-form" class="btn-primary triple-shadow">Sound like you? Book a demo now!</a>
             </div>
         </div>
     </section>
