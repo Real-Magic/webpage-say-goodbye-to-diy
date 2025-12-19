@@ -6,14 +6,11 @@
     <title>Say Goodbye to DIY Marketing | Levitate</title>
     <meta name="description" content="Levitate is your dedicated marketing partner — websites, social media, email, and reviews managed for you. Say goodbye to DIY marketing.">
     <link rel="icon" type="image/png" href="icons/Levitate Icon Only.png">
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com">
     <link rel="dns-prefetch" href="https://js.hs-scripts.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="preload" href="documents/home-hero-bg.lottie" as="fetch" crossorigin>
-    <link rel="preload" href="documents/divider.lottie" as="fetch" crossorigin>
+    <link rel="dns-prefetch" href="https://unpkg.com">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&family=Sriracha&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&family=Sriracha&display=swap"></noscript>
 
@@ -1969,7 +1966,7 @@
     <header class="sticky-header" id="sticky-header">
         <div class="sticky-header-content">
             <a href="#top" class="sticky-header-logo">
-                <img src="images/levitate-logo-white.png" alt="Levitate - Back to top" height="40">
+                <img src="images/levitate-logo-white.png" alt="Levitate - Back to top" width="123" height="40">
             </a>
             <a href="#demo-form" class="btn-primary sticky-cta">Get a Free Demo</a>
         </div>
@@ -2437,12 +2434,12 @@
 
             <!-- Awards Grid -->
             <div class="awards-grid" style="display: flex; justify-content: center; align-items: center; gap: 32px; flex-wrap: wrap;">
-                <img src="images/award-inc5000.png" alt="Inc. 5000 - Two-Time Honoree" class="award-img" style="height: 80px; width: auto; object-fit: contain;">
-                <img src="images/award-workplace.png" alt="USA Today Top Workplace" class="award-img" style="height: 80px; width: auto; object-fit: contain;">
-                <img src="images/award-g2-leader.svg" alt="G2 Momentum Leader" class="award-img" style="height: 80px; width: auto; object-fit: contain;">
-                <img src="images/award-users-love-us.svg" alt="G2 Users Love Us" class="award-img" style="height: 80px; width: auto; object-fit: contain;">
-                <img src="images/award-capterra-ease.svg" alt="Capterra Best Ease of Use" class="award-img" style="height: 80px; width: auto; object-fit: contain;">
-                <img src="images/award-frontrunners.svg" alt="Software Advice FrontRunners" class="award-img" style="height: 80px; width: auto; object-fit: contain;">
+                <img src="images/award-inc5000.png" alt="Inc. 5000 - Two-Time Honoree" class="award-img" width="80" height="80" style="object-fit: contain;">
+                <img src="images/award-workplace.png" alt="USA Today Top Workplace" class="award-img" width="56" height="80" style="object-fit: contain;">
+                <img src="images/award-g2-leader.svg" alt="G2 Momentum Leader" class="award-img" width="80" height="80" style="object-fit: contain;">
+                <img src="images/award-users-love-us.svg" alt="G2 Users Love Us" class="award-img" width="80" height="80" style="object-fit: contain;">
+                <img src="images/award-capterra-ease.svg" alt="Capterra Best Ease of Use" class="award-img" width="80" height="80" style="object-fit: contain;">
+                <img src="images/award-frontrunners.svg" alt="Software Advice FrontRunners" class="award-img" width="80" height="80" style="object-fit: contain;">
             </div>
         </div>
     </section>
@@ -3060,6 +3057,24 @@
                     window.location.href = reportUrl;
                 }, 300);
             });
+        }
+    </script>
+
+    <!-- Lazy Load Lottie Animations - Load after main content is interactive -->
+    <script>
+        // Defer Lottie loading to reduce Total Blocking Time
+        function loadLottie() {
+            const script = document.createElement('script');
+            script.src = 'https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs';
+            script.type = 'module';
+            document.body.appendChild(script);
+        }
+
+        // Load Lottie after page is interactive using requestIdleCallback or fallback
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadLottie, { timeout: 3000 });
+        } else {
+            setTimeout(loadLottie, 2000);
         }
     </script>
 
