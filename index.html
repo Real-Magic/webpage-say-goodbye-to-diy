@@ -10,24 +10,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://js.hs-scripts.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://unpkg.com">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&family=Sriracha&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&family=Sriracha&display=swap"></noscript>
 
-    <!-- HubSpot Tracking Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4465199.js"></script>
-
-    <!-- RB2B Tracking -->
-    <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("4N210HQ5MZ6Z");</script>
-
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3VCZFMJ9QD"></script>
+    <!-- Analytics - Deferred to reduce TBT -->
     <script>
+      // Initialize dataLayer immediately for event queuing
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-3VCZFMJ9QD');
-      gtag('config', 'AW-436138898');
+
+      // Defer all tracking scripts until after user interaction or 3s timeout
+      var trackingLoaded = false;
+      function loadTracking() {
+        if (trackingLoaded) return;
+        trackingLoaded = true;
+
+        // Google Analytics (GA4)
+        var ga = document.createElement('script');
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-3VCZFMJ9QD';
+        ga.async = true;
+        document.head.appendChild(ga);
+        gtag('config', 'G-3VCZFMJ9QD');
+        gtag('config', 'AW-436138898');
+
+        // HubSpot
+        var hs = document.createElement('script');
+        hs.src = '//js.hs-scripts.com/4465199.js';
+        hs.async = true;
+        document.head.appendChild(hs);
+
+        // RB2B
+        if (!window.reb2b) {
+          window.reb2b = {loaded: true};
+          var rb = document.createElement('script');
+          rb.async = true;
+          rb.src = 'https://ddwl4m2hdecbv.cloudfront.net/b/4N210HQ5MZ6Z/4N210HQ5MZ6Z.js.gz';
+          document.head.appendChild(rb);
+        }
+      }
+
+      // Load on user interaction or after 3s
+      ['scroll', 'click', 'keydown', 'touchstart'].forEach(function(e) {
+        window.addEventListener(e, loadTracking, {once: true, passive: true});
+      });
+      setTimeout(loadTracking, 3000);
     </script>
 
     <style>
@@ -216,16 +243,9 @@
         }
 
         .btn-primary.hero-cta {
-            background: linear-gradient(
-                110deg,
-                var(--lev-yellow) 0%,
-                var(--lev-yellow) 40%,
-                #ffe066 50%,
-                var(--lev-yellow) 60%,
-                var(--lev-yellow) 100%
-            );
-            background-size: 200% 100%;
-            animation: shimmer 3s ease-in-out infinite;
+            background: var(--lev-yellow);
+            position: relative;
+            overflow: hidden;
             /* Prevent layout shift from font loading */
             min-height: 58px;
             min-width: 200px;
@@ -236,15 +256,31 @@
             box-shadow:
                 0 4px 0 0 rgba(0, 36, 61, 0.3),
                 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* GPU-accelerated shimmer using pseudo-element */
+        .btn-primary.hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmerSlide 3s ease-in-out infinite;
+            will-change: transform;
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .btn-primary.hero-cta:hover {
             transform: translateY(-2px);
-            animation-play-state: paused;
             box-shadow:
                 0 6px 0 0 rgba(0, 36, 61, 0.3),
                 0 12px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-primary.hero-cta:hover::before {
+            animation-play-state: paused;
         }
 
         .btn-primary.green-light-hover.triple-shadow {
@@ -370,14 +406,15 @@
             50% { opacity: 1; }
         }
 
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
+        /* GPU-accelerated shimmer using pseudo-element */
+        @keyframes shimmerSlide {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
 
+        /* Static gradient - no animation to avoid non-composited paint */
         @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+            0%, 100% { opacity: 1; }
         }
 
         /* Hero Logo */
@@ -394,8 +431,6 @@
         .hero-section {
             background-color: var(--lev-blue);
             background-image: linear-gradient(135deg, var(--lev-blue) 0%, #0040cc 50%, var(--lev-blue) 100%);
-            background-size: 200% 200%;
-            animation: gradientShift 15s ease infinite;
             padding: 64px 5% 140px;
             position: relative;
             overflow-x: clip;
@@ -405,18 +440,46 @@
         .hero-bg-wrapper {
             position: absolute;
             inset: 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
             overflow: hidden;
             pointer-events: none;
         }
 
-        .hero-bg-wrapper dotlottie-player {
-            width: 1920px;
-            flex: none;
+        /* CSS-only floating orbs to replace Lottie background */
+        .hero-bg-wrapper::before,
+        .hero-bg-wrapper::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.15;
             will-change: transform;
-            transform: translateZ(0);
+        }
+
+        .hero-bg-wrapper::before {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--lev-light-blue) 0%, transparent 70%);
+            top: -200px;
+            right: -100px;
+            animation: floatOrb1 20s ease-in-out infinite;
+        }
+
+        .hero-bg-wrapper::after {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--lev-light-green) 0%, transparent 70%);
+            bottom: 100px;
+            left: -100px;
+            animation: floatOrb2 25s ease-in-out infinite;
+        }
+
+        @keyframes floatOrb1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, 30px) scale(1.1); }
+        }
+
+        @keyframes floatOrb2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(20px, -20px) scale(0.9); }
         }
 
         .hero-intro {
@@ -428,29 +491,30 @@
             z-index: 1;
         }
 
-        /* Animated Divider */
+        /* Animated Divider - CSS wave replacing Lottie */
         .animated-divider {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            height: 150px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            overflow-x: hidden;
-            overflow-y: visible;
+            height: 100px;
+            overflow: hidden;
             pointer-events: none;
             z-index: 2;
         }
 
-        .animated-divider dotlottie-player {
-            flex: none;
-            width: 100%;
-            min-width: 2000px;
+        .animated-divider svg {
+            position: absolute;
+            bottom: 0;
+            width: 200%;
             height: 100%;
+            animation: waveSlide 8s linear infinite;
             will-change: transform;
-            transform: translateZ(0);
+        }
+
+        @keyframes waveSlide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
         .hero-headline {
@@ -1200,13 +1264,13 @@
         .cta-demo-form .privacy-notice {
             margin-top: 16px;
             font-size: 12px;
-            color: #888;
+            color: #595959; /* WCAG AA compliant contrast */
             text-align: center;
             line-height: 1.5;
         }
 
         .cta-demo-form .privacy-notice a {
-            color: #666;
+            color: #404040;
             text-decoration: underline;
         }
 
@@ -1236,12 +1300,6 @@
             justify-content: center;
             overflow: hidden;
             pointer-events: none;
-        }
-
-        .cta-divider dotlottie-player {
-            flex: none;
-            width: 100%;
-            min-width: 1440px;
         }
 
         .cta-section h2 {
@@ -1536,25 +1594,33 @@
             font-size: 17px;
             margin-top: 32px;
             border-radius: 12px;
-            background: linear-gradient(
-                110deg,
-                var(--lev-yellow) 0%,
-                var(--lev-yellow) 40%,
-                #ffe066 50%,
-                var(--lev-yellow) 60%,
-                var(--lev-yellow) 100%
-            );
-            background-size: 200% 100%;
-            animation: shimmer 3s ease-in-out infinite;
+            background: var(--lev-yellow);
+            position: relative;
+            overflow: hidden;
             color: var(--lev-dark-blue);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
+        .cta-demo-form button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmerSlide 3s ease-in-out infinite;
+            will-change: transform;
+        }
+
         .cta-demo-form button:hover {
             transform: translateY(-2px);
-            animation-play-state: paused;
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-demo-form button:hover::before {
+            animation-play-state: paused;
         }
 
         .form-trust-bar {
@@ -1974,10 +2040,8 @@
 
     <!-- ========== HERO SECTION ========== -->
     <section class="hero-section">
-        <!-- Animated Background -->
-        <div class="hero-bg-wrapper">
-            <dotlottie-player src="documents/home-hero-bg.lottie" background="transparent" speed="1" loop autoplay renderer="canvas" intermission="0"></dotlottie-player>
-        </div>
+        <!-- Animated Background - CSS only, no Lottie -->
+        <div class="hero-bg-wrapper"></div>
 
         <div class="hero-intro">
             <div class="hero-logo">
@@ -2048,9 +2112,11 @@
             </div>
         </div>
 
-        <!-- Animated Divider -->
+        <!-- Animated Divider - CSS/SVG wave replacing Lottie -->
         <div class="animated-divider">
-            <dotlottie-player src="documents/divider.lottie" background="transparent" speed="1" loop autoplay renderer="canvas" intermission="0"></dotlottie-player>
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#ffffff" d="M0,50 C180,100 360,0 540,50 C720,100 900,0 1080,50 C1260,100 1440,0 1620,50 C1800,100 1980,0 2160,50 C2340,100 2520,0 2700,50 C2880,100 2880,100 2880,100 L2880,100 L0,100 Z"/>
+            </svg>
         </div>
     </section>
 
@@ -3060,23 +3126,6 @@
         }
     </script>
 
-    <!-- Lazy Load Lottie Animations - Load after main content is interactive -->
-    <script>
-        // Defer Lottie loading to reduce Total Blocking Time
-        function loadLottie() {
-            const script = document.createElement('script');
-            script.src = 'https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs';
-            script.type = 'module';
-            document.body.appendChild(script);
-        }
-
-        // Load Lottie after page is interactive using requestIdleCallback or fallback
-        if ('requestIdleCallback' in window) {
-            requestIdleCallback(loadLottie, { timeout: 3000 });
-        } else {
-            setTimeout(loadLottie, 2000);
-        }
-    </script>
 
 </body>
 </html>
