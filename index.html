@@ -475,6 +475,7 @@
             gap: 16px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 24px;
         }
 
         /* Pullquote */
@@ -550,7 +551,8 @@
             display: flex;
             justify-content: center;
             width: 100%;
-            margin-top: 24px;
+            margin-top: 40px;
+            margin-bottom: 16px;
         }
 
         .hero-stat {
@@ -1556,6 +1558,113 @@
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
         }
 
+        .form-trust-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .form-trust-bar .stars {
+            color: #f5a623;
+            letter-spacing: 1px;
+        }
+
+        .form-trust-bar .divider {
+            color: #ccc;
+        }
+
+        .form-mini-testimonial {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            text-align: left;
+        }
+
+        .form-mini-testimonial .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--lev-light-blue);
+            color: var(--lev-dark-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .form-mini-testimonial .quote {
+            font-size: 13px;
+            color: #555;
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 4px;
+        }
+
+        .form-mini-testimonial .attribution {
+            font-size: 11px;
+            color: #888;
+            font-style: normal;
+        }
+
+        /* Social proof block (light theme for blue backgrounds) */
+        .social-proof-block {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .trust-bar-light {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .trust-bar-light .stars {
+            color: var(--lev-yellow);
+            font-size: 16px;
+            letter-spacing: 2px;
+            margin-right: 8px;
+        }
+
+        .trust-bar-light .rating {
+            white-space: nowrap;
+        }
+
+        .trust-bar-light .rating:not(:last-child)::after {
+            content: " · ";
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .testimonial-light {
+            text-align: left;
+        }
+
+        .testimonial-light .quote {
+            font-size: 15px;
+            color: var(--white);
+            font-style: italic;
+            line-height: 1.6;
+            margin: 0 0 8px 0;
+            opacity: 0.95;
+        }
+
+        .testimonial-light .attribution {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: normal;
+        }
+
         .sms-optin {
             margin-top: 16px;
             padding: 12px;
@@ -2025,7 +2134,7 @@
                     </ul>
                 </div>
                 <div class="demo-form-wrapper">
-                    <form id="demo-form" class="cta-demo-form">
+                    <form id="demo-form" class="cta-demo-form demo-form-js">
                         <h3 class="form-title">Book your free demo</h3>
                         <input type="text" name="department" style="position: absolute; left: -9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
                         <div class="form-grid">
@@ -2396,9 +2505,65 @@
                     </ul>
                 </div>
             </div>
-            <div class="mg-48px"></div>
-            <div class="center">
-                <a href="#demo-form" class="btn-primary triple-shadow">Sound like you? Book a demo now!</a>
+        </div>
+    </section>
+
+    <!-- ========== BOTTOM DEMO FORM SECTION ========== -->
+    <section class="demo-form-section">
+        <div class="container">
+            <div class="demo-form-layout">
+                <div class="demo-form-content">
+                    <h2>Ready to say goodbye to DIY?</h2>
+                    <ul class="demo-benefits">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>An audit of your current online presence</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Your competitors' marketing (and how to beat them)</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Keep-in-touch strategies tailored to your industry</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Pricing tailored to your business size</span>
+                        </li>
+                    </ul>
+                    <div class="social-proof-block">
+                        <div class="trust-bar-light">
+                            <span class="stars">★★★★★</span><span class="rating">4.9 on Capterra (264)</span><span class="rating">4.6 on G2 (119)</span><span class="rating">4.9 on Google (202)</span>
+                        </div>
+                        <div class="testimonial-light">
+                            <p class="quote">"I've already seen a return on the marketing in under a month."</p>
+                            <p class="attribution">— Ky S., Google Review</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-form-wrapper">
+                    <form id="demo-form-bottom" class="cta-demo-form demo-form-js">
+                        <h3 class="form-title">Book your free demo</h3>
+                        <input type="text" name="department" style="position: absolute; left: -9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="demo-email-bottom">Email</label>
+                                <input type="email" id="demo-email-bottom" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="demo-phone-bottom">Phone</label>
+                                <input type="tel" id="demo-phone-bottom" name="phone" placeholder="Phone" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="demo-company-bottom">Business name</label>
+                                <input type="text" id="demo-company-bottom" name="company" placeholder="Your business name" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary">Get a Free Demo</button>
+                        <p class="privacy-notice">We will handle your contact details in line with our <a href="https://www.levitate.ai/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.</p>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -2589,9 +2754,9 @@
             }
         }
 
-        // Demo form handler
-        const demoForm = document.getElementById('demo-form');
-        if (demoForm) {
+        // Demo form handler (supports multiple forms)
+        const demoForms = document.querySelectorAll('.demo-form-js');
+        demoForms.forEach(demoForm => {
             demoForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
 
@@ -2651,7 +2816,7 @@
                     btn.disabled = false;
                 }
             });
-        }
+        });
 
         // Email form handler
         const emailForm = document.querySelector('.email-form');
