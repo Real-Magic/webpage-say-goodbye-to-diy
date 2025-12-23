@@ -1,0 +1,3396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Websites for Small Businesses | Levitate</title>
+    <meta name="description" content="Get a stunning, mobile-friendly website built and maintained for you. No DIY templates. No monthly hassles. Just a professional online presence that converts visitors into clients.">
+    <link rel="icon" type="image/png" href="../icons/Levitate Icon Only.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://js.hs-scripts.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&family=Sriracha&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&family=Sriracha&display=swap"></noscript>
+
+    <!-- Analytics - Deferred to reduce TBT -->
+    <script>
+      // Initialize dataLayer immediately for event queuing
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // Defer all tracking scripts until after user interaction or 3s timeout
+      var trackingLoaded = false;
+      function loadTracking() {
+        if (trackingLoaded) return;
+        trackingLoaded = true;
+
+        // Google Analytics (GA4)
+        var ga = document.createElement('script');
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-3VCZFMJ9QD';
+        ga.async = true;
+        document.head.appendChild(ga);
+        gtag('config', 'G-3VCZFMJ9QD');
+        gtag('config', 'AW-436138898');
+
+        // HubSpot
+        var hs = document.createElement('script');
+        hs.src = '//js.hs-scripts.com/4465199.js';
+        hs.async = true;
+        document.head.appendChild(hs);
+
+        // RB2B
+        if (!window.reb2b) {
+          window.reb2b = {loaded: true};
+          var rb = document.createElement('script');
+          rb.async = true;
+          rb.src = 'https://ddwl4m2hdecbv.cloudfront.net/b/4N210HQ5MZ6Z/4N210HQ5MZ6Z.js.gz';
+          document.head.appendChild(rb);
+        }
+      }
+
+      // Load on user interaction or after 3s
+      ['scroll', 'click', 'keydown', 'touchstart'].forEach(function(e) {
+        window.addEventListener(e, loadTracking, {once: true, passive: true});
+      });
+      setTimeout(loadTracking, 3000);
+    </script>
+
+    <style>
+        /* ========== CSS VARIABLES (from Webflow) ========== */
+        :root {
+            --lev-blue: #015bff;
+            --lev-light-blue: #00d1ff;
+            --lev-dark-blue: #00243d;
+            --lev-light-green: #95dd83;
+            --lev-med-green: #43922f;
+            --lev-yellow: #ffcd19;
+            --lev-salmon: #ee846f;
+            --lev-purple: #9432f6;
+            --lev-red: #ea0606;
+            --lev-teal: #40b3a2;
+            --white: #fff;
+            --black: #000;
+        }
+
+        /* ========== RESET & BASE ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lexend', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.8em;
+            color: var(--black);
+        }
+
+        /* ========== TYPOGRAPHY (matching Webflow) ========== */
+        h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 1.1em;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.1em;
+            margin-bottom: 48px;
+        }
+
+        h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.3em;
+            margin-bottom: 18px;
+        }
+
+        h4, h2.h4-size {
+            font-family: 'Sora', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.3em;
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        .big-paragraph {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        /* ========== EMPHASIS TEXT (Sriracha) ========== */
+        .emphasis-text {
+            font-family: 'Sriracha', cursive;
+            font-size: 1.2em;
+            font-weight: 400;
+            display: inline-block;
+        }
+
+        .emphasis-text.yellow {
+            color: var(--lev-yellow);
+        }
+
+        .emphasis-text.blue {
+            color: var(--lev-blue);
+        }
+
+        .emphasis-text.green {
+            color: var(--lev-med-green);
+        }
+
+        .emphasis-text.red {
+            color: var(--lev-red);
+        }
+
+        /* ========== UNDERLINED TEXT ========== */
+        .underlined-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        .underlined-text::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            height: 20px;
+            background-image: url('icons/underlines/underline-1.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            filter: brightness(0) saturate(100%) invert(79%) sepia(82%) saturate(1392%) hue-rotate(359deg) brightness(103%) contrast(103%);
+        }
+
+        /* ========== LAYOUT ========== */
+        .container {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .container.wide {
+            max-width: 1200px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .section {
+            padding: 64px 5%;
+        }
+
+        .mg-16px { height: 16px; }
+        .mg-32px { height: 32px; }
+        .mg-48px { height: 48px; }
+
+        /* ========== BUTTONS (matching Webflow) ========== */
+        .btn-primary {
+            background-color: var(--lev-blue);
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 8px;
+            padding: 16px 24px;
+            font-family: 'Lexend', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 26px;
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0645b9;
+        }
+
+        .btn-primary.green-light-hover {
+            background-color: var(--lev-light-green);
+            color: var(--black);
+        }
+
+        .btn-primary.green-light-hover:hover {
+            background-color: var(--lev-yellow);
+        }
+
+        .btn-primary.triple-shadow {
+            white-space: nowrap;
+            height: 60px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary.hero-cta {
+            background: var(--lev-yellow);
+            position: relative;
+            overflow: hidden;
+            /* Prevent layout shift from font loading */
+            min-height: 58px;
+            min-width: 200px;
+            color: var(--lev-dark-blue);
+            font-size: 18px;
+            padding: 20px 48px;
+            height: auto;
+            box-shadow:
+                0 4px 0 0 rgba(0, 36, 61, 0.3),
+                0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* GPU-accelerated shimmer using pseudo-element */
+        .btn-primary.hero-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmerSlide 3s ease-in-out infinite;
+            will-change: transform;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary.hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 6px 0 0 rgba(0, 36, 61, 0.3),
+                0 12px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .btn-primary.hero-cta:hover::before {
+            animation-play-state: paused;
+        }
+
+        .btn-primary.green-light-hover.triple-shadow {
+            color: var(--white);
+        }
+
+        .btn-primary.secondary {
+            background-color: var(--lev-dark-blue);
+        }
+
+        .btn-primary.secondary:hover {
+            background-color: var(--lev-light-blue);
+        }
+
+        .btn-primary.red {
+            background-color: var(--lev-red);
+        }
+
+        /* ========== STICKY HEADER ========== */
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--lev-dark-blue);
+            padding: 12px 24px;
+            z-index: 1000;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .sticky-header.visible {
+            transform: translateY(0);
+        }
+
+        .sticky-header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sticky-header-text {
+            color: var(--white);
+            font-family: 'Sora', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .sticky-cta {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .sticky-header-text {
+                display: none;
+            }
+            .sticky-header-content {
+                justify-content: center;
+            }
+        }
+
+        /* ========== MID-PAGE CTA ========== */
+        .mid-page-cta {
+            text-align: center;
+            padding: 48px 24px;
+            background: linear-gradient(135deg, var(--lev-light-blue) 0%, var(--lev-blue) 100%);
+        }
+
+        .mid-page-cta .btn-primary {
+            font-size: 18px;
+            padding: 16px 32px;
+        }
+
+        /* ========== DOUBLE BORDER (signature Levitate style) ========== */
+        .double-border {
+            border: 0.25rem solid var(--lev-med-green);
+            background-color: rgba(68, 172, 73, 0.1);
+            box-shadow: 0 0 0 0.5rem rgba(68, 172, 73, 0.2);
+            border-radius: 1.75rem;
+        }
+
+        .double-border.light-blue {
+            border-color: var(--lev-light-blue);
+            box-shadow: 0 0 0 10px rgba(0, 209, 255, 0.3);
+        }
+
+        .double-border.light-green {
+            border-color: var(--lev-light-green);
+            box-shadow: 0 0 0 10px rgba(149, 221, 131, 0.3);
+        }
+
+        .double-border.blue {
+            border-color: var(--lev-blue);
+            box-shadow: 0 0 0 10px rgba(1, 91, 255, 0.3);
+        }
+
+        .double-border.salmon {
+            border-color: var(--lev-salmon);
+            box-shadow: 0 0 0 10px rgba(238, 132, 111, 0.3);
+        }
+
+        .double-border.purple {
+            border-color: var(--lev-purple);
+            box-shadow: 0 0 0 10px rgba(148, 50, 246, 0.3);
+        }
+
+        .double-border.background-white {
+            background-color: var(--white);
+        }
+
+        /* ========== HERO SECTION ========== */
+        /* ========== ANIMATIONS ========== */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+
+        /* GPU-accelerated shimmer using pseudo-element */
+        @keyframes shimmerSlide {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Static gradient - no animation to avoid non-composited paint */
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; }
+        }
+
+        /* Hero Logo */
+        .hero-logo {
+            display: block;
+            margin: 0 auto 32px;
+        }
+
+        .hero-logo img {
+            height: 80px;
+            width: auto;
+        }
+
+        .hero-section {
+            background-color: var(--lev-blue);
+            background-image: linear-gradient(135deg, var(--lev-blue) 0%, #0040cc 50%, var(--lev-blue) 100%);
+            padding: 64px 5% 140px;
+            position: relative;
+            overflow-x: clip;
+            overflow-y: visible;
+        }
+
+        .hero-bg-wrapper {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        /* CSS-only floating orbs to replace Lottie background */
+        .hero-bg-wrapper::before,
+        .hero-bg-wrapper::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.15;
+            will-change: transform;
+        }
+
+        .hero-bg-wrapper::before {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--lev-light-blue) 0%, transparent 70%);
+            top: -200px;
+            right: -100px;
+            animation: floatOrb1 20s ease-in-out infinite;
+        }
+
+        .hero-bg-wrapper::after {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--lev-light-green) 0%, transparent 70%);
+            bottom: 100px;
+            left: -100px;
+            animation: floatOrb2 25s ease-in-out infinite;
+        }
+
+        @keyframes floatOrb1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, 30px) scale(1.1); }
+        }
+
+        @keyframes floatOrb2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(20px, -20px) scale(0.9); }
+        }
+
+        .hero-intro {
+            text-align: center;
+            color: var(--white);
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Animated Divider - CSS wave replacing Lottie */
+        .animated-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .animated-divider svg {
+            position: absolute;
+            bottom: 0;
+            width: 200%;
+            height: 100%;
+            animation: waveSlide 8s linear infinite;
+            will-change: transform;
+        }
+
+        @keyframes waveSlide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .hero-headline {
+            font-size: clamp(50px, 8vw, 100px);
+            line-height: 1.3;
+            margin-bottom: 24px;
+        }
+
+        .hero-intro .big-paragraph {
+            font-size: 21px;
+        }
+
+        .white-text {
+            color: var(--white);
+        }
+
+        .hero-cta-wrapper {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 24px;
+        }
+
+        /* Pullquote */
+        .pullquote {
+            margin-top: 48px;
+            padding: 24px;
+        }
+
+        .pullquote-stars {
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .pullquote-stars svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--lev-yellow);
+        }
+
+        .pullquote-quote {
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        /* ========== HERO VIDEO ========== */
+        .hero-video-wrapper {
+            margin-top: 48px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-video-container {
+            position: relative;
+            border-radius: 1.75rem;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-video-container.double-border.light-blue {
+            background: transparent;
+        }
+
+        .hero-video {
+            width: 100%;
+            display: block;
+            border-radius: 1.25rem;
+        }
+
+        /* ========== HERO TESTIMONIALS ========== */
+        .hero-testimonials {
+            margin-top: 48px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-stats-bar {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 16px;
+            min-height: 70px;
+            min-width: 400px;
+            position: relative;
+        }
+
+        .hero-stats-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+
+        .hero-stat {
+            text-align: center;
+            position: absolute;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            pointer-events: none;
+        }
+
+        .hero-stat.active {
+            opacity: 1;
+            transform: translateY(0);
+            position: relative;
+            pointer-events: auto;
+        }
+
+        .hero-stat-number {
+            font-family: 'Sora', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--lev-yellow);
+            margin-bottom: 8px;
+        }
+
+        .hero-stat-label {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .hero-testimonial-strip {
+            display: flex;
+            gap: 32px;
+            margin-top: 24px;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            overflow: hidden;
+        }
+
+        .hero-quote {
+            flex: 1;
+            min-width: 0;
+            text-align: center;
+        }
+
+        .hero-quote .quote-text {
+            font-size: 14px;
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 6px;
+        }
+
+        .hero-quote .quote-text::before {
+            content: '\201C';
+            color: var(--lev-yellow);
+            font-size: 20px;
+            font-weight: 600;
+            font-style: normal;
+            margin-right: 2px;
+        }
+
+        .hero-quote .quote-text::after {
+            content: '\201D';
+            color: var(--lev-yellow);
+            font-size: 20px;
+            font-weight: 600;
+            font-style: normal;
+            margin-left: 2px;
+        }
+
+        .hero-quote .quote-author {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .see-more-link {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--lev-yellow);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .see-more-link:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 991px) {
+            .hero-testimonial-strip {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+        }
+
+        /* ========== FEATURES GRID ========== */
+        .home-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin: 48px 0;
+        }
+
+        .home-feature-wrapper {
+            text-align: center;
+            padding: 24px;
+        }
+
+        .home-features-icon-wrapper {
+            margin-bottom: 16px;
+        }
+
+        .home-features-icon {
+            width: 80px;
+            height: 80px;
+        }
+
+        /* ========== TWO COLUMN FLEX ========== */
+        .two-column-flex-block {
+            display: flex;
+            gap: 64px;
+            align-items: center;
+            margin: 64px 0;
+        }
+
+        .two-column-flex-block.flipped {
+            flex-direction: row-reverse;
+        }
+
+        .flex-column {
+            flex: 1;
+        }
+
+        .flex-column-visuals {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Specialist headshots grid */
+        .specialists-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 420px;
+        }
+
+        .specialist-headshot {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--white);
+        }
+
+        .specialist-headshot picture {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .specialist-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonials-masonry {
+            column-count: 3;
+            column-gap: 16px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 1rem;
+            padding: 24px;
+            position: relative;
+            transition: transform 0.2s;
+            break-inside: avoid;
+            margin-bottom: 16px;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .testimonial-card .quote-mark {
+            font-family: 'Sriracha', cursive;
+            font-size: 48px;
+            line-height: 1;
+            position: absolute;
+            top: 12px;
+            left: 20px;
+            opacity: 0.12;
+        }
+
+        .testimonial-card.border-blue { border: 2px solid var(--lev-blue); }
+        .testimonial-card.border-light-blue { border: 2px solid var(--lev-light-blue); }
+        .testimonial-card.border-green { border: 2px solid var(--lev-light-green); }
+        .testimonial-card.border-salmon { border: 2px solid var(--lev-salmon); }
+        .testimonial-card.border-purple { border: 2px solid var(--lev-purple); }
+        .testimonial-card.border-yellow { border: 2px solid var(--lev-yellow); }
+
+        .testimonial-card.border-blue .quote-mark { color: var(--lev-blue); }
+        .testimonial-card.border-light-blue .quote-mark { color: var(--lev-light-blue); }
+        .testimonial-card.border-green .quote-mark { color: var(--lev-light-green); }
+        .testimonial-card.border-salmon .quote-mark { color: var(--lev-salmon); }
+        .testimonial-card.border-purple .quote-mark { color: var(--lev-purple); }
+        .testimonial-card.border-yellow .quote-mark { color: var(--lev-yellow); }
+
+        .testimonial-card .quote-text {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-card .quote-text strong {
+            color: var(--lev-dark-blue);
+            font-weight: 600;
+        }
+
+        .testimonial-card .attribution {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .testimonial-card .avatar {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            min-height: 40px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--white);
+        }
+
+        .testimonial-card.border-blue .avatar { background: var(--lev-blue); }
+        .testimonial-card.border-light-blue .avatar { background: var(--lev-light-blue); color: var(--lev-dark-blue); }
+        .testimonial-card.border-green .avatar { background: var(--lev-light-green); color: var(--black); }
+        .testimonial-card.border-salmon .avatar { background: var(--lev-salmon); color: var(--lev-dark-blue); }
+        .testimonial-card.border-purple .avatar { background: var(--lev-purple); }
+        .testimonial-card.border-yellow .avatar { background: var(--lev-yellow); color: var(--black); }
+
+        .testimonial-card .author-info strong {
+            display: block;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.3;
+        }
+
+        .testimonial-card .author-info span {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.2;
+            display: block;
+        }
+
+        .testimonial-card .industry-tag {
+            margin-left: auto;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .industry-tag.financial { background: #e3f2fd; color: #1565c0; }
+        .industry-tag.legal { background: #e8f5e9; color: #2e7d32; }
+        .industry-tag.nonprofit { background: #fce4ec; color: #c2185b; }
+        .industry-tag.insurance { background: #fff3e0; color: #bf360c; }
+        .industry-tag.other { background: #f3e5f5; color: #7b1fa2; }
+
+        @media (max-width: 991px) {
+            .testimonials-masonry {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .testimonials-masonry {
+                column-count: 1;
+            }
+        }
+
+        .testimonial-attribution {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* ========== STATS ROW ========== */
+        .stats-row {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin: 48px 0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(40px, 5vw, 56px);
+            font-weight: 700;
+            color: var(--lev-blue);
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        /* ========== PAIN POINTS ========== */
+        .pain-points-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .pain-point {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .pain-icon {
+            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            background: transparent;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pain-icon-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* ========== SOLUTION PILLARS ========== */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pillar-card {
+            padding: 32px 24px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .pillar-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 20px;
+            background: var(--lev-blue);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pillar-icon-img {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+
+        /* ========== HOW IT WORKS ========== */
+        .steps-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, var(--lev-light-blue) 0%, var(--lev-blue) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Sora', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--white);
+            margin: 0 auto 20px;
+        }
+
+        /* ========== QUALIFIER SECTION ========== */
+        .qualifier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .qualifier-card {
+            padding: 32px;
+        }
+
+        .qualifier-card.for-you {
+            background-color: rgba(149, 221, 131, 0.1);
+            border: 2px solid var(--lev-light-green);
+        }
+
+        .qualifier-card.not-for-you {
+            background-color: rgba(234, 6, 6, 0.05);
+            border: 2px solid rgba(234, 6, 6, 0.3);
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        .checklist .icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .for-you .icon {
+            background: var(--lev-med-green);
+            color: var(--white);
+        }
+
+        .not-for-you .icon {
+            background: var(--lev-red);
+            color: var(--white);
+        }
+
+        /* ========== LEAD MAGNET ========== */
+        .lead-magnet-card {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 48px;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .email-form input {
+            padding: 16px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: 'Lexend', sans-serif;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+        }
+
+        .email-form input:focus {
+            border-color: var(--lev-light-blue);
+        }
+
+        .email-form button {
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        /* Company Autocomplete Styles */
+        .company-field-wrapper {
+            position: relative;
+            display: flex;
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+        }
+
+        .company-field-wrapper input {
+            width: 100%;
+            height: 100%;
+        }
+
+        .autocomplete-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 2px solid var(--lev-light-blue);
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            max-height: 240px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .autocomplete-dropdown.show {
+            display: block;
+        }
+
+        .autocomplete-item {
+            padding: 12px 16px;
+            cursor: pointer;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 14px;
+            color: #333;
+            transition: background 0.15s;
+        }
+
+        .autocomplete-item:last-child {
+            border-bottom: none;
+        }
+
+        .autocomplete-item:hover {
+            background: #f1f5f9;
+        }
+
+        .autocomplete-item.selected {
+            background: var(--lev-light-blue);
+            color: white;
+        }
+
+        .autocomplete-loading,
+        .autocomplete-no-results {
+            padding: 16px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .company-field-wrapper input.has-selection {
+            border-color: var(--lev-green);
+            background-color: #f0fdf4;
+        }
+
+        /* Responsive: stack on mobile */
+        @media (max-width: 767px) {
+            .email-form {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            .company-field-wrapper {
+                min-width: 100%;
+                max-width: 100%;
+            }
+            .email-form input {
+                height: auto;
+            }
+            .email-form button {
+                width: 100%;
+            }
+        }
+
+        /* Health Check form - stacked layout */
+        #health-check-form {
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        #health-check-form .company-field-wrapper {
+            min-width: 100%;
+            max-width: 100%;
+        }
+
+        #health-check-form button {
+            width: 100%;
+        }
+
+        .lead-magnet-card .privacy-notice {
+            margin-top: 16px;
+            font-size: 13px;
+            color: #666;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .lead-magnet-card .privacy-notice a {
+            color: var(--lev-blue);
+            text-decoration: underline;
+        }
+
+        .lead-magnet-card .privacy-notice a:hover {
+            opacity: 0.8;
+        }
+
+        .cta-demo-form .privacy-notice {
+            margin-top: 16px;
+            font-size: 12px;
+            color: #595959; /* WCAG AA compliant contrast */
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .cta-demo-form .privacy-notice a {
+            color: #404040;
+            text-decoration: underline;
+        }
+
+        .cta-demo-form .privacy-notice a:hover {
+            opacity: 0.8;
+        }
+
+        /* ========== CTA SECTION ========== */
+        .cta-section {
+            background-color: var(--lev-blue);
+            background-image: linear-gradient(135deg, var(--lev-blue) 0%, #0040cc 50%, var(--lev-blue) 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 15s ease infinite;
+            padding: 96px 5%;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-divider {
+            position: absolute;
+            top: -300px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 16px;
+        }
+
+        .cta-section > .container > p {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .demo-expectations {
+            max-width: 420px;
+            margin: 0 auto 48px;
+            text-align: left;
+        }
+
+        .demo-expectations-heading {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .demo-expectations ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .demo-expectations li {
+            font-size: 16px;
+            line-height: 1.5;
+            padding: 6px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .demo-expectations li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--lev-light-green);
+            font-weight: bold;
+        }
+
+        .cta-section .awards-wrapper {
+            margin-top: 0;
+            margin-bottom: 24px;
+            padding: 20px 32px;
+            border-top: none;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-section .awards-group {
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cta-section .award-img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .cta-testimonial {
+            max-width: 500px;
+            margin: 24px auto 0;
+            text-align: center;
+        }
+
+        .cta-stars {
+            font-size: 24px;
+            color: var(--lev-yellow);
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+        }
+
+        .cta-quote {
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 8px;
+            opacity: 0.95;
+        }
+
+        .cta-author {
+            font-size: 14px;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        /* ========== DEMO FORM SECTION ========== */
+        .demo-form-section {
+            background: linear-gradient(135deg, var(--lev-light-blue) 0%, var(--lev-blue) 100%);
+            padding: 64px 5%;
+        }
+
+        .demo-form-section .container {
+            max-width: 1000px;
+        }
+
+        .demo-form-layout {
+            display: flex;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .demo-form-content {
+            flex: 1;
+            color: var(--white);
+        }
+
+        .demo-form-content h2 {
+            font-size: 32px;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+
+        .demo-form-content .demo-benefits {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .demo-form-content .demo-benefits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        .demo-form-content .demo-benefits li svg {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            color: var(--lev-yellow);
+            margin-top: 2px;
+        }
+
+        .demo-form-wrapper {
+            flex: 0 0 420px;
+            min-width: 0;
+            max-width: 420px;
+        }
+
+        @media (max-width: 1080px) {
+            .demo-form-layout {
+                flex-direction: column-reverse;
+                gap: 32px;
+            }
+
+            .demo-form-wrapper {
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .demo-form-content {
+                text-align: center;
+            }
+
+            .demo-form-content .demo-benefits li {
+                justify-content: flex-start;
+                text-align: left;
+            }
+        }
+
+        .cta-demo-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 32px 32px 24px;
+            border-radius: 1.75rem;
+            border: 0.25rem solid var(--lev-light-blue);
+            box-shadow: 0 0 0 10px rgba(0, 209, 255, 0.3);
+            scroll-margin-top: 100px;
+        }
+
+        .cta-demo-form .form-title {
+            font-family: 'Sora', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--lev-blue);
+            margin: 0 0 32px 0;
+            text-align: center;
+        }
+
+        /* Form Success State */
+        .form-success {
+            text-align: center;
+            padding: 24px 16px;
+        }
+
+        .form-success-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--lev-light-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .form-success-icon svg {
+            width: 32px;
+            height: 32px;
+            color: white;
+        }
+
+        .form-success h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--lev-dark-blue);
+            margin: 0 0 16px 0;
+        }
+
+        .form-success p {
+            font-size: 16px;
+            color: #555;
+            margin: 0 0 8px 0;
+            line-height: 1.6;
+        }
+
+        .form-success .next-steps {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .cta-demo-form .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .cta-demo-form input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #00d1ff;
+            border-radius: 12px;
+            font-family: 'Lexend', sans-serif;
+            font-size: 16px;
+            background: var(--white);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-demo-form input:focus {
+            outline: none;
+            border-color: #015bff;
+            box-shadow: 0 0 0 3px rgba(1, 91, 255, 0.15);
+        }
+
+        .cta-demo-form input::placeholder {
+            color: #999;
+        }
+
+        .cta-demo-form .form-group {
+            text-align: left;
+        }
+
+        .cta-demo-form .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .cta-demo-form label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #00243d;
+            margin-bottom: 6px;
+        }
+
+        .cta-demo-form button {
+            width: 100%;
+            padding: 18px 32px;
+            font-size: 17px;
+            margin-top: 32px;
+            border-radius: 12px;
+            background: var(--lev-yellow);
+            position: relative;
+            overflow: hidden;
+            color: var(--lev-dark-blue);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-demo-form button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmerSlide 3s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        .cta-demo-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-demo-form button:hover::before {
+            animation-play-state: paused;
+        }
+
+        .form-trust-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .form-trust-bar .stars {
+            color: #f5a623;
+            letter-spacing: 1px;
+        }
+
+        .form-trust-bar .divider {
+            color: #ccc;
+        }
+
+        .form-mini-testimonial {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            text-align: left;
+        }
+
+        .form-mini-testimonial .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--lev-light-blue);
+            color: var(--lev-dark-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .form-mini-testimonial .quote {
+            font-size: 13px;
+            color: #555;
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 4px;
+        }
+
+        .form-mini-testimonial .attribution {
+            font-size: 11px;
+            color: #888;
+            font-style: normal;
+        }
+
+        /* Social proof block (light theme for blue backgrounds) */
+        .social-proof-block {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .trust-bar-light {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .trust-bar-light .stars {
+            color: var(--lev-yellow);
+            font-size: 16px;
+            letter-spacing: 2px;
+            margin-right: 8px;
+        }
+
+        .trust-bar-light .rating {
+            white-space: nowrap;
+        }
+
+        .trust-bar-light .rating:not(:last-child)::after {
+            content: " · ";
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .testimonial-light {
+            text-align: left;
+        }
+
+        .testimonial-light .quote {
+            font-size: 15px;
+            color: var(--white);
+            font-style: italic;
+            line-height: 1.6;
+            margin: 0 0 8px 0;
+            opacity: 0.95;
+        }
+
+        .testimonial-light .attribution {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: normal;
+        }
+
+        .sms-optin {
+            margin-top: 16px;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .sms-optin-header {
+            font-size: 12px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        .sms-optin label {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 11px;
+            font-weight: 400;
+            color: #666;
+            line-height: 1.4;
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+
+        .sms-optin input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            margin-top: 1px;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .sms-optin-note {
+            font-size: 10px;
+            color: #999;
+            margin-top: 6px;
+        }
+
+        @media (max-width: 500px) {
+            .cta-demo-form .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-demo-form .form-group.full-width {
+                grid-column: 1;
+            }
+        }
+
+        .social-count {
+            margin-top: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            opacity: 0.95;
+        }
+
+        /* ========== AWARDS ========== */
+        .awards-wrapper {
+            margin-top: 64px;
+            padding-top: 48px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .awards-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 36px;
+            flex-wrap: nowrap;
+            margin-bottom: 24px;
+        }
+
+        .award-img {
+            height: 100px;
+            width: 120px;
+            object-fit: contain;
+        }
+
+        .award-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        /* ========== INTEGRATIONS ========== */
+        .integrations-section {
+            background: linear-gradient(135deg, var(--lev-dark-blue) 0%, #001a2e 100%);
+            padding: 80px 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .integrations-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(0, 209, 255, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(1, 91, 255, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .integrations-section h3 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .integrations-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .integration-logo-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .integration-logo-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .integration-logo {
+            max-width: 110px;
+            max-height: 36px;
+            object-fit: contain;
+        }
+
+        @media (max-width: 600px) {
+            .integrations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background-color: var(--lev-dark-blue);
+            color: var(--white);
+            padding: 40px 5% 32px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto 24px;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 13px;
+            opacity: 0.7;
+        }
+
+        .footer-divider {
+            opacity: 0.5;
+        }
+
+        .footer-bottom a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .social-links {
+            display: inline-flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .social-links a {
+            color: white;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links a:hover {
+            opacity: 1 !important;
+        }
+
+        /* ========== INTEGRATIONS MARQUEE ========== */
+        .integrations-section {
+            background-color: var(--lev-dark-blue);
+            padding: 96px 5%;
+            overflow: hidden;
+        }
+
+        .integration-wrap {
+            display: flex;
+            gap: 24px;
+            animation: scroll 30s linear infinite;
+        }
+
+        .integration-card {
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 16px 32px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 150px;
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 991px) {
+            h1, .hero-headline { font-size: 56px; }
+            h2 { font-size: 40px; }
+            h3 { font-size: 28px; }
+
+            .two-column-flex-block,
+            .two-column-flex-block.flipped {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            h1, .hero-headline { font-size: 40px; }
+            h2 { font-size: 32px; }
+            h3 { font-size: 24px; }
+
+            .section {
+                padding: 64px 5%;
+            }
+
+            .hero-section {
+                padding: 48px 5% 64px;
+            }
+
+            .animated-divider {
+                height: 100px;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .email-form input {
+                min-width: 100%;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .footer-divider {
+                display: none;
+            }
+
+            .mid-page-cta .btn-primary {
+                max-width: 100%;
+                white-space: normal;
+                line-height: 1.4;
+            }
+
+            .specialists-grid {
+                margin: 0 auto;
+            }
+        }
+
+        /* ========== DEMO SHOWCASE ========== */
+        .demo-showcase {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        @media (max-width: 991px) {
+            .demo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .demo-card {
+            background: var(--white);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .demo-card-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            object-position: top;
+            border-bottom: 3px solid var(--lev-light-blue);
+        }
+
+        .demo-card-content {
+            padding: 20px;
+        }
+
+        .demo-card-industry {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--lev-blue);
+            margin-bottom: 8px;
+        }
+
+        .demo-card-title {
+            font-family: 'Sora', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .demo-card-link {
+            font-size: 14px;
+            color: var(--lev-blue);
+            font-weight: 500;
+        }
+
+        .demo-card-link::after {
+            content: ' →';
+        }
+
+        /* ========== PRICING TABLE ========== */
+        .pricing-section {
+            background: var(--white);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        @media (max-width: 991px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        .pricing-card {
+            border-radius: 1.5rem;
+            padding: 32px 24px;
+            text-align: center;
+            position: relative;
+            background: var(--white);
+            border: 2px solid #e2e8f0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--lev-blue);
+            box-shadow: 0 0 0 4px rgba(1, 91, 255, 0.15);
+        }
+
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--lev-blue);
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-tier {
+            font-family: 'Sora', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--lev-dark-blue);
+        }
+
+        .pricing-price {
+            font-family: 'Sora', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--lev-blue);
+            margin-bottom: 4px;
+        }
+
+        .pricing-price span {
+            font-size: 18px;
+            font-weight: 400;
+            color: #666;
+        }
+
+        .pricing-pages {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            font-size: 14px;
+            padding: 8px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--lev-med-green);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .pricing-features li.not-included {
+            color: #999;
+        }
+
+        .pricing-features li.not-included::before {
+            content: '—';
+            color: #ccc;
+        }
+
+        .pricing-cta {
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body id="top">
+
+    <!-- ========== STICKY HEADER ========== -->
+    <header class="sticky-header" id="sticky-header">
+        <div class="sticky-header-content">
+            <a href="#top" class="sticky-header-logo">
+                <img src="../images/levitate-logo-white.png" alt="Levitate - Back to top" width="123" height="40">
+            </a>
+            <a href="#demo-form" class="btn-primary sticky-cta">Get Free Consultation</a>
+        </div>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-section">
+        <!-- Animated Background - CSS only, no Lottie -->
+        <div class="hero-bg-wrapper"></div>
+
+        <div class="hero-intro">
+            <div class="hero-logo">
+                <a href="#demo-form">
+                    <img src="../images/levitate-logo-white.png" alt="Levitate" width="246" height="80">
+                </a>
+            </div>
+            <h1 class="hero-headline">Your Website Should <span class="underlined-text">Win</span> You <span class="emphasis-text yellow">Clients</span></h1>
+            <div class="white-text">
+                <p class="big-paragraph">72% of people Google you before calling. Get a professional website<br>built and maintained for you—no DIY templates, no monthly hassles.</p>
+            </div>
+            <!-- Stats Bar -->
+            <div class="hero-stats-wrapper white-text">
+                <div class="hero-stats-bar">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="1501" data-suffix="+">0+</div>
+                        <div class="hero-stat-label">Professional Websites Launched</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="72" data-suffix="%">0%</div>
+                        <div class="hero-stat-label">Of Clients Find You Online First</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="100" data-suffix="%">0%</div>
+                        <div class="hero-stat-label">Mobile-Optimized Designs</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="4.9" data-suffix="/5.0" data-decimals="1">0/5.0</div>
+                        <div class="hero-stat-label">Average Customer Satisfaction</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="7939" data-suffix="+">0+</div>
+                        <div class="hero-stat-label">Small Businesses Trust Levitate</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="0" data-suffix="">$0</div>
+                        <div class="hero-stat-label">Upfront Cost to Get Started</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number" data-count="14" data-suffix=" Days">0 Days</div>
+                        <div class="hero-stat-label">Average Time to Launch</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-cta-wrapper">
+                <a href="#demo-form" class="btn-primary hero-cta">Get Your Free Website Consultation</a>
+            </div>
+
+            <!-- Testimonials Section -->
+            <div class="hero-testimonials white-text">
+                <!-- Testimonial Strip -->
+                <div class="hero-testimonial-strip">
+                    <div class="hero-quote">
+                        <p class="quote-text">Our new website looks amazing and we're finally getting calls from it.</p>
+                        <span class="quote-author">Kevin I., Financial Services</span>
+                    </div>
+                    <div class="hero-quote">
+                        <p class="quote-text">I was embarrassed to send people to our old site. Now I'm proud of it.</p>
+                        <span class="quote-author">Patrick H., Nonprofit</span>
+                    </div>
+                    <div class="hero-quote">
+                        <p class="quote-text">They handled everything—design, content, SEO. I just approved it.</p>
+                        <span class="quote-author">G.C., Legal</span>
+                    </div>
+                </div>
+                <a href="#testimonials" class="see-more-link">See more reviews →</a>
+            </div>
+        </div>
+
+        <!-- Animated Divider - CSS/SVG wave replacing Lottie -->
+        <div class="animated-divider">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#ffffff" d="M0,50 C180,100 360,0 540,50 C720,100 900,0 1080,50 C1260,100 1440,0 1620,50 C1800,100 1980,0 2160,50 C2340,100 2520,0 2700,50 C2880,100 2880,100 2880,100 L2880,100 L0,100 Z"/>
+            </svg>
+        </div>
+    </section>
+
+    <main>
+    <!-- ========== DEMO SHOWCASE SECTION ========== -->
+    <section class="section demo-showcase">
+        <div class="container wide">
+            <div class="center">
+                <h2>See what we can build <span class="emphasis-text blue">for you</span></h2>
+                <p class="big-paragraph">Explore real demo sites we've created for different industries. Yours will be custom-designed for your brand.</p>
+            </div>
+            <div class="demo-grid">
+                <a href="http://demosite-fin.levitate.ai/" target="_blank" rel="noopener" class="demo-card">
+                    <img src="https://api.microlink.io/?url=http://demosite-fin.levitate.ai/&screenshot=true&meta=false&embed=screenshot.url" alt="Financial Services Demo Site" class="demo-card-image" loading="lazy">
+                    <div class="demo-card-content">
+                        <div class="demo-card-industry">Financial Services</div>
+                        <div class="demo-card-title">Wealth Management Firm</div>
+                        <span class="demo-card-link">View demo site</span>
+                    </div>
+                </a>
+                <a href="http://demosite-ins.levitate.ai/" target="_blank" rel="noopener" class="demo-card">
+                    <img src="https://api.microlink.io/?url=http://demosite-ins.levitate.ai/&screenshot=true&meta=false&embed=screenshot.url" alt="Insurance Demo Site" class="demo-card-image" loading="lazy">
+                    <div class="demo-card-content">
+                        <div class="demo-card-industry">Insurance</div>
+                        <div class="demo-card-title">Insurance Agency</div>
+                        <span class="demo-card-link">View demo site</span>
+                    </div>
+                </a>
+                <a href="http://demosite-lgl.levitate.ai/" target="_blank" rel="noopener" class="demo-card">
+                    <img src="https://api.microlink.io/?url=http://demosite-lgl.levitate.ai/&screenshot=true&meta=false&embed=screenshot.url" alt="Legal Demo Site" class="demo-card-image" loading="lazy">
+                    <div class="demo-card-content">
+                        <div class="demo-card-industry">Legal</div>
+                        <div class="demo-card-title">Law Firm</div>
+                        <span class="demo-card-link">View demo site</span>
+                    </div>
+                </a>
+                <a href="http://demosite-cpa.levitate.ai/" target="_blank" rel="noopener" class="demo-card">
+                    <img src="https://api.microlink.io/?url=http://demosite-cpa.levitate.ai/&screenshot=true&meta=false&embed=screenshot.url" alt="CPA Demo Site" class="demo-card-image" loading="lazy">
+                    <div class="demo-card-content">
+                        <div class="demo-card-industry">Accounting</div>
+                        <div class="demo-card-title">CPA Firm</div>
+                        <span class="demo-card-link">View demo site</span>
+                    </div>
+                </a>
+                <a href="http://demosite-dentist.levitate.ai/" target="_blank" rel="noopener" class="demo-card">
+                    <img src="https://api.microlink.io/?url=http://demosite-dentist.levitate.ai/&screenshot=true&meta=false&embed=screenshot.url" alt="Dental Demo Site" class="demo-card-image" loading="lazy">
+                    <div class="demo-card-content">
+                        <div class="demo-card-industry">Healthcare</div>
+                        <div class="demo-card-title">Dental Practice</div>
+                        <span class="demo-card-link">View demo site</span>
+                    </div>
+                </a>
+                <a href="http://demosite-chiro.levitate.ai/" target="_blank" rel="noopener" class="demo-card">
+                    <img src="https://api.microlink.io/?url=http://demosite-chiro.levitate.ai/&screenshot=true&meta=false&embed=screenshot.url" alt="Chiropractic Demo Site" class="demo-card-image" loading="lazy">
+                    <div class="demo-card-content">
+                        <div class="demo-card-industry">Healthcare</div>
+                        <div class="demo-card-title">Chiropractic Clinic</div>
+                        <span class="demo-card-link">View demo site</span>
+                    </div>
+                </a>
+            </div>
+            <div class="mg-48px"></div>
+            <div class="center">
+                <a href="#demo-form" class="btn-primary">Get a Custom Design for Your Business</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROBLEM SECTION ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="center">
+                <h2>Your website is your <span class="emphasis-text blue">first impression</span></h2>
+                <p class="big-paragraph">When clients Google your name, what do they find? A professional presence—or an excuse to call your competitor?</p>
+            </div>
+            <div class="mg-48px"></div>
+            <div class="pain-points-grid">
+                <div class="pain-point">
+                    <div class="pain-icon"><picture><source srcset="../icons/icon-reminder.webp" type="image/webp"><img src="../icons/icon-reminder.png" alt="Reminder icon" class="pain-icon-img" width="64" height="64"></picture></div>
+                    <div>
+                        <h2 class="h4-size">Outdated Design</h2>
+                        <p>Your site looks like it was built in 2010. Visitors bounce before they even read what you do.</p>
+                    </div>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-icon"><picture><source srcset="../icons/icon-network.webp" type="image/webp"><img src="../icons/icon-network.png" alt="Network icon" class="pain-icon-img" width="64" height="64"></picture></div>
+                    <div>
+                        <h2 class="h4-size">Not Mobile-Friendly</h2>
+                        <p>60%+ of visitors are on their phones. If your site isn't mobile-optimized, you're losing leads.</p>
+                    </div>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-icon"><picture><source srcset="../icons/icon-piggybank.webp" type="image/webp"><img src="../icons/icon-piggybank.png" alt="Piggy bank icon" class="pain-icon-img" width="64" height="64"></picture></div>
+                    <div>
+                        <h2 class="h4-size">DIY Template Trap</h2>
+                        <p>Wix, Squarespace, GoDaddy... you spent weekends wrestling with templates and it still looks generic.</p>
+                    </div>
+                </div>
+                <div class="pain-point">
+                    <div class="pain-icon"><picture><source srcset="../icons/icon-frown.webp" type="image/webp"><img src="../icons/icon-frown.png" alt="Frown icon" class="pain-icon-img" width="64" height="64"></picture></div>
+                    <div>
+                        <h2 class="h4-size">No Time to Update</h2>
+                        <p>Your site says "© 2019" and lists services you don't even offer anymore. Sound familiar?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== DEMO FORM SECTION ========== -->
+    <section class="demo-form-section">
+        <div class="container">
+            <div class="demo-form-layout">
+                <div class="demo-form-content">
+                    <h2>On your free website consultation, you'll get:</h2>
+                    <ul class="demo-benefits">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>A review of your current website's strengths and weaknesses</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Examples of professional websites in your industry</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Mobile responsiveness and SEO quick-check</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Transparent pricing with no surprise fees</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="demo-form-wrapper">
+                    <form id="demo-form" class="cta-demo-form demo-form-js">
+                        <h3 class="form-title">Get your free website consultation</h3>
+                        <input type="text" name="department" style="position: absolute; left: -9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="demo-email">Email</label>
+                                <input type="email" id="demo-email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="demo-phone">Phone</label>
+                                <input type="tel" id="demo-phone" name="phone" placeholder="Phone" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="demo-company">Business name</label>
+                                <input type="text" id="demo-company" name="company" placeholder="Your business name" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary">Get Free Consultation</button>
+                        <p class="privacy-notice">We will handle your contact details in line with our <a href="https://www.levitate.ai/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SOLUTION SECTION ========== -->
+    <section class="section" style="background-color: #f8fafc;">
+        <div class="container wide">
+            <div class="center">
+                <h2>Everything you need, <span class="emphasis-text green">all included</span></h2>
+                <p class="big-paragraph">A complete website solution with premium features—no hidden fees, no à la carte pricing.</p>
+            </div>
+            <div class="mg-48px"></div>
+            <div class="home-features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="pillar-card double-border light-blue background-white">
+                    <div class="pillar-icon" style="background: linear-gradient(135deg, var(--lev-light-blue), var(--lev-blue));"><picture><source srcset="../icons/icon-globe-white.webp" type="image/webp"><img src="../icons/icon-globe-white.png" alt="Website icon" class="pillar-icon-img"></picture></div>
+                    <h2 class="h4-size">Custom Design</h2>
+                    <p>No cookie-cutter templates. Your website is designed from scratch to match your brand and stand out from competitors.</p>
+                </div>
+                <div class="pillar-card double-border light-green background-white">
+                    <div class="pillar-icon" style="background: linear-gradient(135deg, var(--lev-light-green), var(--lev-med-green));"><picture><source srcset="../icons/icon-megaphone-white.webp" type="image/webp"><img src="../icons/icon-megaphone-white.png" alt="Blog icon" class="pillar-icon-img"></picture></div>
+                    <h2 class="h4-size">Automated Blogs</h2>
+                    <p>AI-powered blog posts generated, scheduled, and published automatically. Fresh content that keeps your site ranking.</p>
+                </div>
+                <div class="pillar-card double-border salmon background-white">
+                    <div class="pillar-icon" style="background: var(--lev-salmon);"><picture><source srcset="../icons/icon-writing-white.webp" type="image/webp"><img src="../icons/icon-writing-white.png" alt="Content icon" class="pillar-icon-img"></picture></div>
+                    <h2 class="h4-size">SEO Optimization</h2>
+                    <p>Keyword audit, targeted copy, location landing pages, FAQ schema, and optimized meta tags—all done for you.</p>
+                </div>
+                <div class="pillar-card double-border purple background-white">
+                    <div class="pillar-icon" style="background: var(--lev-purple);"><picture><source srcset="../icons/icon-presenter-white.webp" type="image/webp"><img src="../icons/icon-presenter-white.png" alt="GEO icon" class="pillar-icon-img"></picture></div>
+                    <h2 class="h4-size">GEO Optimization</h2>
+                    <p>Content written to appear in AI search results (ChatGPT, Google AI). Be found where your clients are searching.</p>
+                </div>
+                <div class="pillar-card double-border blue background-white">
+                    <div class="pillar-icon" style="background: var(--lev-blue);"><picture><source srcset="../icons/icon-network.webp" type="image/webp"><img src="../icons/icon-network.png" alt="Compliance icon" class="pillar-icon-img"></picture></div>
+                    <h2 class="h4-size">ADA & Compliance</h2>
+                    <p>Accessibility compliance, multi-language translations, and financial compliance review available for regulated industries.</p>
+                </div>
+                <div class="pillar-card double-border light-blue background-white">
+                    <div class="pillar-icon" style="background: linear-gradient(135deg, var(--lev-light-blue), var(--lev-blue));"><picture><source srcset="../icons/icon-reminder.webp" type="image/webp"><img src="../icons/icon-reminder.png" alt="Leads icon" class="pillar-icon-img"></picture></div>
+                    <h2 class="h4-size">Leads & Reviews</h2>
+                    <p>Built-in lead capture forms and Google Review integration. Turn visitors into clients and clients into promoters.</p>
+                </div>
+            </div>
+            <div class="mg-48px"></div>
+            <div class="center">
+                <p style="font-size: 16px; color: #666; max-width: 700px; margin: 0 auto 24px;">Plus: Monthly performance reports, content rights you keep forever, and ongoing maintenance included.</p>
+                <a href="#demo-form" class="btn-primary">See What's Included for Your Business</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== AUTHENTICITY SECTION ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="center">
+                <h2>Built by people who <span class="emphasis-text green">actually care</span></h2>
+            </div>
+            <div class="two-column-flex-block">
+                <div class="flex-column">
+                    <h3>Your Dedicated Website Specialist</h3>
+                    <p>You'll work directly with a dedicated specialist who learns your business, handles the design process, and stays with you long after launch. Need a change? Shoot them an email. No tickets, no waiting, no surprise charges.</p>
+                </div>
+                <div class="flex-column">
+                    <div class="flex-column-visuals">
+                        <div class="specialists-grid">
+                            <div class="specialist-headshot double-border blue">
+                                <picture>
+                                    <source srcset="../icons/specialist-1.webp" type="image/webp">
+                                    <img src="../icons/specialist-1.png" alt="Success Specialist" class="specialist-photo" width="172" height="172" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="specialist-headshot double-border light-green">
+                                <picture>
+                                    <source srcset="../icons/specialist-2.webp" type="image/webp">
+                                    <img src="../icons/specialist-2.png" alt="Success Specialist" class="specialist-photo" width="172" height="172" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="specialist-headshot double-border purple">
+                                <picture>
+                                    <source srcset="../icons/specialist-4.webp" type="image/webp">
+                                    <img src="../icons/specialist-4.png" alt="Success Specialist" class="specialist-photo" width="172" height="172" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="specialist-headshot double-border salmon">
+                                <picture>
+                                    <source srcset="../icons/specialist-6.webp" type="image/webp">
+                                    <img src="../icons/specialist-6.png" alt="Success Specialist" class="specialist-photo" width="172" height="172" loading="lazy">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <section id="testimonials" class="section" style="padding-top: 32px;">
+        <div class="container">
+            <div class="center">
+                <h2>Our customers <span class="emphasis-text red">love</span> their websites</h2>
+                <p class="big-paragraph">Don't just take our word for it—see what our clients say about their new online presence.</p>
+            </div>
+            <div class="mg-32px"></div>
+            <div class="testimonials-masonry">
+                <div class="testimonial-card border-blue">
+                                        <p class="quote-text">"Our new website is <strong>stunning</strong>! I was embarrassed to send people to our old site. Now I'm proud to share our URL with anyone."</p>
+                    <div class="attribution">
+                        <div class="avatar">JM</div>
+                        <div class="author-info">
+                            <strong>Julie M.</strong>
+                            <span>Executive Director</span>
+                        </div>
+                        <span class="industry-tag nonprofit">Nonprofit</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-salmon">
+                                        <p class="quote-text">"It's like having your own <strong>web development team</strong> for a fraction of the cost. They handled everything—I just approved the designs."</p>
+                    <div class="attribution">
+                        <div class="avatar">KI</div>
+                        <div class="author-info">
+                            <strong>Kevin I.</strong>
+                            <span>Owner & Managing Director</span>
+                        </div>
+                        <span class="industry-tag financial">Financial</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-green">
+                                        <p class="quote-text">"The website they built us <strong>looks better than competitors</strong> charging 3x as much. And updates are always included."</p>
+                    <div class="attribution">
+                        <div class="avatar">JC</div>
+                        <div class="author-info">
+                            <strong>Jill C.</strong>
+                            <span>Onboarding Specialist</span>
+                        </div>
+                        <span class="industry-tag legal">Legal</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-light-blue">
+                                        <p class="quote-text">"The <strong>personal support</strong> is unmatched. Need a change? I email my specialist and it's done—no tickets, no waiting."</p>
+                    <div class="attribution">
+                        <div class="avatar">PH</div>
+                        <div class="author-info">
+                            <strong>Patrick H.</strong>
+                            <span>Fundraising Coordinator</span>
+                        </div>
+                        <span class="industry-tag nonprofit">Nonprofit</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-purple">
+                                        <p class="quote-text">"I tried Wix, Squarespace, GoDaddy... none of them looked right. Levitate <strong>built exactly what I wanted</strong> in two weeks."</p>
+                    <div class="attribution">
+                        <div class="avatar">AJ</div>
+                        <div class="author-info">
+                            <strong>April J.</strong>
+                            <span>Managing Partner</span>
+                        </div>
+                        <span class="industry-tag insurance">Insurance</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-yellow">
+                                        <p class="quote-text">"Our website finally <strong>works on phones</strong>! We were losing so many potential clients before because our old site was a mess on mobile."</p>
+                    <div class="attribution">
+                        <div class="avatar">TW</div>
+                        <div class="author-info">
+                            <strong>Tina W.</strong>
+                            <span>Agent</span>
+                        </div>
+                        <span class="industry-tag insurance">Insurance</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-salmon">
+                                        <p class="quote-text">"Levitate is <strong>near effortless</strong> to keep up with client interaction!"</p>
+                    <div class="attribution">
+                        <div class="avatar">AP</div>
+                        <div class="author-info">
+                            <strong>Adam P.</strong>
+                            <span>CFO</span>
+                        </div>
+                        <span class="industry-tag financial">Financial</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-blue">
+                                        <p class="quote-text">"Levitate <strong>takes the guesswork out</strong> of what emails people will open."</p>
+                    <div class="attribution">
+                        <div class="avatar">RL</div>
+                        <div class="author-info">
+                            <strong>Rachel L.</strong>
+                            <span>Office Manager</span>
+                        </div>
+                        <span class="industry-tag financial">Financial</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-green">
+                                        <p class="quote-text">"Levitate helped us <strong>think through the entire quarter</strong>. It forced us to get organized."</p>
+                    <div class="attribution">
+                        <div class="avatar">RV</div>
+                        <div class="author-info">
+                            <strong>Richard V.</strong>
+                            <span>Executive Director</span>
+                        </div>
+                        <span class="industry-tag nonprofit">Nonprofit</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-light-blue">
+                                        <p class="quote-text">"I'm constantly reviewing my tech stack. Levitate keeps showing up as <strong>the tool that replaces the rest</strong>."</p>
+                    <div class="attribution">
+                        <div class="avatar">GC</div>
+                        <div class="author-info">
+                            <strong>G.C.</strong>
+                            <span>CEO</span>
+                        </div>
+                        <span class="industry-tag legal">Legal</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-purple">
+                                        <p class="quote-text">"Levitate implemented AI so quickly. That <strong>mindset of growth + adaptation</strong> matters to me as a business owner."</p>
+                    <div class="attribution">
+                        <div class="avatar">GC</div>
+                        <div class="author-info">
+                            <strong>G.C.</strong>
+                            <span>CEO</span>
+                        </div>
+                        <span class="industry-tag legal">Legal</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-yellow">
+                                        <p class="quote-text">"Levitate is a company of <strong>real people helping small businesses thrive</strong>."</p>
+                    <div class="attribution">
+                        <div class="avatar">AC</div>
+                        <div class="author-info">
+                            <strong>Amanda C.</strong>
+                            <span>Owner</span>
+                        </div>
+                        <span class="industry-tag other">Business</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card border-salmon">
+                                        <p class="quote-text">"Half of the overall experience with Levitate has everything to do with our <strong>account specialist</strong>. They believe in what they're supporting."</p>
+                    <div class="attribution">
+                        <div class="avatar">JP</div>
+                        <div class="author-info">
+                            <strong>Jannie P.</strong>
+                            <span>Executive Administrator</span>
+                        </div>
+                        <span class="industry-tag nonprofit">Nonprofit</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TRUST & AWARDS SECTION ========== -->
+    <section class="section trust-section" style="background-color: #f8f9fa; padding: 64px 5%;">
+        <div class="container wide">
+            <div class="center">
+                <h2>Trusted by <span class="emphasis-text blue">thousands</span> of small businesses</h2>
+                <p class="big-paragraph" style="margin-bottom: 32px;">Based in Raleigh, NC with a team of 280+ marketing and customer success professionals dedicated to helping small businesses grow.</p>
+            </div>
+
+            <!-- Company Stats -->
+            <div class="trust-stats" style="display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; margin-bottom: 48px;">
+                <div class="trust-stat" style="text-align: center;">
+                    <div style="font-family: 'Sora', sans-serif; font-size: 48px; font-weight: 700; color: var(--lev-blue);">280+</div>
+                    <div style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7;">Employees</div>
+                </div>
+                <div class="trust-stat" style="text-align: center;">
+                    <div style="font-family: 'Sora', sans-serif; font-size: 48px; font-weight: 700; color: var(--lev-blue);">3x</div>
+                    <div style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7;">Inc. 5000 Honoree</div>
+                </div>
+                <div class="trust-stat" style="text-align: center;">
+                    <div style="font-family: 'Sora', sans-serif; font-size: 48px; font-weight: 700; color: var(--lev-blue);">8+</div>
+                    <div style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7;">Years in Business</div>
+                </div>
+            </div>
+
+            <!-- Awards Grid -->
+            <div class="awards-grid" style="display: flex; justify-content: center; align-items: center; gap: 32px; flex-wrap: wrap;">
+                <img src="../images/award-inc5000.png" alt="Inc. 5000 - Two-Time Honoree" class="award-img" width="80" height="80" style="object-fit: contain;">
+                <img src="../images/award-workplace.png" alt="USA Today Top Workplace" class="award-img" width="56" height="80" style="object-fit: contain;">
+                <img src="../images/award-g2-leader.svg" alt="G2 Momentum Leader" class="award-img" width="80" height="80" style="object-fit: contain;">
+                <img src="../images/award-users-love-us.svg" alt="G2 Users Love Us" class="award-img" width="80" height="80" style="object-fit: contain;">
+                <img src="../images/award-capterra-ease.svg" alt="Capterra Best Ease of Use" class="award-img" width="80" height="80" style="object-fit: contain;">
+                <img src="../images/award-frontrunners.svg" alt="Software Advice FrontRunners" class="award-img" width="80" height="80" style="object-fit: contain;">
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS SECTION ========== -->
+    <section class="section" style="background-color: var(--lev-dark-blue); color: var(--white);">
+        <div class="container">
+            <div class="center white-text">
+                <h2>Your new website in <span class="emphasis-text yellow">3 simple steps</span></h2>
+            </div>
+            <div class="mg-48px"></div>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h2 class="h4-size">Share Your Vision</h2>
+                    <p>A quick discovery call to understand your business, your clients, and what you want your website to accomplish.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h2 class="h4-size">We Design & Build</h2>
+                    <p>Our team creates a custom design, writes compelling content, and builds a mobile-optimized site. You review and approve.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h2 class="h4-size">Launch & Maintain</h2>
+                    <p>We handle the launch, set up analytics, and continue maintaining your site. Updates are always included.</p>
+                </div>
+            </div>
+            <div class="mg-48px"></div>
+            <div class="center">
+                <a href="#demo-form" class="double-border light-blue" style="display: inline-block; padding: 24px 48px; background: transparent; text-decoration: none; color: var(--white); transition: transform 0.2s, box-shadow 0.2s;">
+                    <strong>Most websites launch in 14 days. No upfront cost to start.</strong>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== QUALIFIER SECTION ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="center">
+                <h2>Is a Levitate website <span class="emphasis-text blue">right for you?</span></h2>
+            </div>
+            <div class="mg-48px"></div>
+            <div class="qualifier-grid">
+                <div class="qualifier-card for-you" style="border-radius: 1.75rem;">
+                    <h2 class="h4-size" style="color: var(--lev-med-green);">This Is For You If...</h2>
+                    <ul class="checklist">
+                        <li><span class="icon">✓</span> Your current site is outdated, embarrassing, or non-existent</li>
+                        <li><span class="icon">✓</span> You don't have time to build or maintain a website yourself</li>
+                        <li><span class="icon">✓</span> You want a professional online presence that converts visitors</li>
+                        <li><span class="icon">✓</span> You're tired of DIY builders that never look quite right</li>
+                        <li><span class="icon">✓</span> You need a partner, not a project you have to manage</li>
+                    </ul>
+                </div>
+                <div class="qualifier-card not-for-you" style="border-radius: 1.75rem;">
+                    <h2 class="h4-size" style="color: var(--lev-red);">This Isn't For You If...</h2>
+                    <ul class="checklist">
+                        <li><span class="icon">✕</span> You have a web developer on staff</li>
+                        <li><span class="icon">✕</span> You need a complex e-commerce platform</li>
+                        <li><span class="icon">✕</span> You enjoy maintaining your own website</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BOTTOM DEMO FORM SECTION ========== -->
+    <section class="demo-form-section">
+        <div class="container">
+            <div class="demo-form-layout">
+                <div class="demo-form-content">
+                    <h2>Ready for a website you're proud of?</h2>
+                    <ul class="demo-benefits">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>A review of your current website's strengths and weaknesses</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Examples of professional websites in your industry</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Mobile responsiveness and SEO quick-check</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <span>Transparent pricing with no surprise fees</span>
+                        </li>
+                    </ul>
+                    <div class="social-proof-block">
+                        <div class="trust-bar-light">
+                            <span class="stars">★★★★★</span><span class="rating">4.9 on Capterra (264)</span><span class="rating">4.6 on G2 (119)</span><span class="rating">4.9 on Google (202)</span>
+                        </div>
+                        <div class="testimonial-light">
+                            <p class="quote">"Our new website looks amazing and we're finally getting calls from it."</p>
+                            <p class="attribution">— Kevin I., Financial Services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-form-wrapper">
+                    <form id="demo-form-bottom" class="cta-demo-form demo-form-js">
+                        <h3 class="form-title">Get your free website consultation</h3>
+                        <input type="text" name="department" style="position: absolute; left: -9999px;" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="demo-email-bottom">Email</label>
+                                <input type="email" id="demo-email-bottom" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="demo-phone-bottom">Phone</label>
+                                <input type="tel" id="demo-phone-bottom" name="phone" placeholder="Phone" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="demo-company-bottom">Business name</label>
+                                <input type="text" id="demo-company-bottom" name="company" placeholder="Your business name" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary">Get Free Consultation</button>
+                        <p class="privacy-notice">We will handle your contact details in line with our <a href="https://www.levitate.ai/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <a href="#top" class="footer-logo">
+                <img src="../images/levitate-logo-white.png" alt="Levitate - Back to top" width="132" height="44">
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <a href="https://www.levitate.ai" target="_blank" rel="noopener">© 2025 Real Magic</a>
+            <span class="footer-divider">|</span>
+            <a href="https://maps.app.goo.gl/B8cQ67pajZTJpSFH9" target="_blank" rel="noopener">2409 Crabtree Blvd, Raleigh, NC 27604</a>
+            <span class="footer-divider">|</span>
+            <a href="tel:888-253-7050">888-253-7050</a>
+            <span class="footer-divider">|</span>
+            <a href="https://www.levitate.ai/terms-of-service">Terms of Service</a>
+            <span class="footer-divider">|</span>
+            <a href="https://www.levitate.ai/privacy-policy">Privacy Policy</a>
+            <span class="footer-divider">|</span>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/real-magic/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/LevitateAI/" target="_blank" rel="noopener" aria-label="Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/levitateai/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Count-up Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('[data-count]');
+            const duration = 2000; // Animation duration in ms
+            const delay = 300; // Delay before starting
+
+            function easeOutQuart(t) {
+                return 1 - Math.pow(1 - t, 4);
+            }
+
+            function formatNumber(num, decimals) {
+                if (decimals > 0) {
+                    return num.toFixed(decimals);
+                }
+                return Math.floor(num).toLocaleString();
+            }
+
+            function animateCounter(el) {
+                const target = parseFloat(el.dataset.count);
+                const suffix = el.dataset.suffix || '';
+                const decimals = parseInt(el.dataset.decimals) || 0;
+                const startTime = performance.now();
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easedProgress = easeOutQuart(progress);
+                    const current = easedProgress * target;
+
+                    el.textContent = formatNumber(current, decimals) + suffix;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+
+                requestAnimationFrame(update);
+            }
+
+            // Use Intersection Observer to trigger when stats come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            animateCounter(entry.target);
+                        }, delay);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(counter => observer.observe(counter));
+
+            // Sticky header visibility
+            const stickyHeader = document.getElementById('sticky-header');
+            const heroSection = document.querySelector('.hero-section');
+
+            const headerObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        stickyHeader.classList.add('visible');
+                    } else {
+                        stickyHeader.classList.remove('visible');
+                    }
+                });
+            }, { threshold: 0, rootMargin: '-100px 0px 0px 0px' });
+
+            headerObserver.observe(heroSection);
+
+            // Stats Carousel - show one stat at a time
+            const statsBar = document.querySelector('.hero-stats-bar');
+            const stats = document.querySelectorAll('.hero-stat');
+            let currentStat = 0;
+            const displayDuration = 3500; // 3.5 seconds per stat
+
+            function showStat(index) {
+                // Hide all stats
+                stats.forEach(stat => stat.classList.remove('active'));
+
+                // Show current stat
+                stats[index].classList.add('active');
+
+                // Trigger count animation for this stat (restart every time)
+                const counter = stats[index].querySelector('[data-count]');
+                if (counter) {
+                    // Reset to initial value
+                    const suffix = counter.dataset.suffix || '';
+                    counter.textContent = '0' + suffix;
+                    // Animate
+                    animateCounter(counter);
+                }
+            }
+
+            function nextStat() {
+                currentStat = (currentStat + 1) % stats.length;
+                showStat(currentStat);
+            }
+
+            // Initialize first stat
+            if (stats.length > 0) {
+                showStat(0);
+                // Start carousel
+                setInterval(nextStat, displayDuration);
+            }
+        });
+
+        // Form submission to Zapier
+        const ZAPIER_WEBHOOK = 'https://hooks.zapier.com/hooks/catch/11261250/ufclj1v/';
+
+        // Helper to get URL parameters
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                utm_source: params.get('utm_source') || '',
+                utm_medium: params.get('utm_medium') || '',
+                utm_campaign: params.get('utm_campaign') || '',
+                utm_content: params.get('utm_content') || '',
+                utm_term: params.get('utm_term') || '',
+                gclid: params.get('gclid') || '',
+                fbclid: params.get('fbclid') || '',
+                rdt_cid: params.get('rdt_cid') || ''
+            };
+        }
+
+        // Get page info
+        function getPageInfo() {
+            return {
+                page_url: window.location.href,
+                page_uri: window.location.pathname,
+                page_name: document.title,
+                page_id: 'say-goodbye-landing-page'
+            };
+        }
+
+        // Get HubSpot user token from cookie
+        function getHutk() {
+            const match = document.cookie.match(/hubspotutk=([^;]+)/);
+            return match ? match[1] : '';
+        }
+
+        // Get user IP address
+        async function getIpAddress() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                return data.ip;
+            } catch (error) {
+                return '';
+            }
+        }
+
+        // Demo form handler (supports multiple forms)
+        const demoForms = document.querySelectorAll('.demo-form-js');
+        demoForms.forEach(demoForm => {
+            demoForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+
+                // Honeypot check - if filled, it's a bot
+                if (data.department) {
+                    console.log('Bot detected');
+                    return;
+                }
+
+                const btn = this.querySelector('button');
+                const originalText = btn.textContent;
+                btn.textContent = 'Sending...';
+                btn.disabled = true;
+
+                // Get IP address
+                const ipAddress = await getIpAddress();
+
+                try {
+                    await fetch(ZAPIER_WEBHOOK, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            form: 'demo',
+                            email: data.email,
+                            company: data.company,
+                            phone: data.phone,
+                            hutk: getHutk(),
+                            ip_address: ipAddress,
+                            submitted_at: new Date().toISOString(),
+                            ...getPageInfo(),
+                            ...getUrlParams()
+                        })
+                    });
+
+                    // Fire Google Ads conversion event
+                    gtag('event', 'conversion', {'send_to': 'AW-436138898/OBVHCMq4hNIbEJLn-88B'});
+
+                    // Replace form with success message
+                    this.innerHTML = `
+                        <div class="form-success">
+                            <div class="form-success-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <h3>You're all set!</h3>
+                            <p>We'll reach out within <strong>1 business day</strong> to schedule your personalized demo.</p>
+                            <p class="next-steps">Keep an eye on your inbox for an email from our team.</p>
+                        </div>
+                    `;
+                } catch (error) {
+                    btn.textContent = 'Error - Try Again';
+                    btn.disabled = false;
+                }
+            });
+        });
+
+        // Email form handler
+        const emailForm = document.querySelector('.email-form');
+        if (emailForm) {
+            emailForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+
+                // Honeypot check
+                if (data.department) {
+                    console.log('Bot detected');
+                    return;
+                }
+
+                const btn = this.querySelector('button');
+                const originalText = btn.textContent;
+                btn.textContent = 'Sending...';
+                btn.disabled = true;
+
+                // Get IP address
+                const ipAddress = await getIpAddress();
+
+                try {
+                    await fetch(ZAPIER_WEBHOOK, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            form: 'lead_magnet',
+                            email: data.email,
+                            hutk: getHutk(),
+                            ip_address: ipAddress,
+                            submitted_at: new Date().toISOString(),
+                            ...getPageInfo(),
+                            ...getUrlParams()
+                        })
+                    });
+
+                    btn.textContent = 'Check Your Email!';
+                    btn.style.background = '#43922f';
+                    this.reset();
+
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }, 3000);
+                } catch (error) {
+                    btn.textContent = 'Error - Try Again';
+                    btn.disabled = false;
+                }
+            });
+        }
+
+        // ========== Company Autocomplete & Health Check Form ==========
+        const GETMYSCORE_API = 'https://simple-online-health-form.vercel.app/api/autocomplete-business';
+        const GETMYSCORE_REPORT_URL = 'https://www.levitate.ai/getmyscore';
+
+        // State for selected business
+        let selectedBusiness = null;
+        let debounceTimer = null;
+
+        // Autocomplete functionality
+        const companyInput = document.getElementById('companySearch');
+        const autocompleteDropdown = document.getElementById('autocomplete-dropdown');
+
+        if (companyInput && autocompleteDropdown) {
+            // Debounced input handler
+            companyInput.addEventListener('input', function(e) {
+                const input = e.target.value.trim();
+
+                // Clear previous selection if user types something different
+                if (selectedBusiness && input !== selectedBusiness.text) {
+                    selectedBusiness = null;
+                    companyInput.classList.remove('has-selection');
+                }
+
+                // Clear previous timer
+                if (debounceTimer) {
+                    clearTimeout(debounceTimer);
+                }
+
+                // Hide dropdown if input is too short
+                if (input.length < 2) {
+                    hideDropdown();
+                    return;
+                }
+
+                // Show loading state
+                showDropdownLoading();
+
+                // Debounce API call
+                debounceTimer = setTimeout(() => {
+                    fetchAutocompleteSuggestions(input);
+                }, 300);
+            });
+
+            // Hide dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!companyInput.contains(e.target) && !autocompleteDropdown.contains(e.target)) {
+                    hideDropdown();
+                }
+            });
+
+            // Keyboard navigation
+            companyInput.addEventListener('keydown', function(e) {
+                const items = autocompleteDropdown.querySelectorAll('.autocomplete-item');
+                const currentIndex = Array.from(items).findIndex(item => item.classList.contains('selected'));
+
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    const nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0;
+                    selectItemByIndex(items, nextIndex);
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    const prevIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
+                    selectItemByIndex(items, prevIndex);
+                } else if (e.key === 'Enter' && currentIndex >= 0) {
+                    e.preventDefault();
+                    items[currentIndex].click();
+                } else if (e.key === 'Escape') {
+                    hideDropdown();
+                }
+            });
+        }
+
+        function selectItemByIndex(items, index) {
+            items.forEach(item => item.classList.remove('selected'));
+            if (items[index]) {
+                items[index].classList.add('selected');
+                items[index].scrollIntoView({ block: 'nearest' });
+            }
+        }
+
+        async function fetchAutocompleteSuggestions(input) {
+            try {
+                const response = await fetch(GETMYSCORE_API, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ input: input })
+                });
+
+                if (!response.ok) {
+                    throw new Error('API request failed');
+                }
+
+                const data = await response.json();
+                displaySuggestions(data.suggestions || []);
+            } catch (error) {
+                console.error('Autocomplete error:', error);
+                showDropdownNoResults('Unable to search. Please try again.');
+            }
+        }
+
+        function displaySuggestions(suggestions) {
+            if (suggestions.length === 0) {
+                showDropdownNoResults('No businesses found. Try a different search.');
+                return;
+            }
+
+            autocompleteDropdown.innerHTML = suggestions.map(suggestion => `
+                <div class="autocomplete-item"
+                     data-place-id="${suggestion.placeId}"
+                     data-text="${escapeHtml(suggestion.text)}">
+                    ${escapeHtml(suggestion.text)}
+                </div>
+            `).join('');
+
+            // Add click handlers
+            autocompleteDropdown.querySelectorAll('.autocomplete-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const placeId = this.dataset.placeId;
+                    const text = this.dataset.text;
+
+                    selectedBusiness = { text, placeId };
+                    companyInput.value = text;
+                    companyInput.classList.add('has-selection');
+                    hideDropdown();
+                });
+            });
+
+            autocompleteDropdown.classList.add('show');
+        }
+
+        function showDropdownLoading() {
+            autocompleteDropdown.innerHTML = '<div class="autocomplete-loading">Searching...</div>';
+            autocompleteDropdown.classList.add('show');
+        }
+
+        function showDropdownNoResults(message) {
+            autocompleteDropdown.innerHTML = `<div class="autocomplete-no-results">${message}</div>`;
+            autocompleteDropdown.classList.add('show');
+        }
+
+        function hideDropdown() {
+            autocompleteDropdown.classList.remove('show');
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Health Check Form handler
+        const healthCheckForm = document.getElementById('health-check-form');
+        if (healthCheckForm) {
+            healthCheckForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData);
+
+                // Honeypot check
+                if (data.department) {
+                    console.log('Bot detected');
+                    return;
+                }
+
+                // Validate company selection
+                if (!selectedBusiness || !selectedBusiness.placeId) {
+                    alert('Please select your business from the dropdown suggestions.');
+                    companyInput.focus();
+                    return;
+                }
+
+                const btn = this.querySelector('button');
+                btn.textContent = 'Generating Report...';
+                btn.disabled = true;
+
+                // Fire Google Ads conversion event
+                gtag('event', 'conversion', {'send_to': 'AW-436138898/OBVHCMq4hNIbEJLn-88B'});
+
+                // Redirect to getmyscore report page after short delay to ensure tracking fires
+                const reportUrl = `${GETMYSCORE_REPORT_URL}?place_id=${encodeURIComponent(selectedBusiness.placeId)}&auto=true`;
+                setTimeout(() => {
+                    window.location.href = reportUrl;
+                }, 300);
+            });
+        }
+    </script>
+
+
+</body>
+</html>
