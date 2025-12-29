@@ -798,15 +798,30 @@
             border-radius: 1rem;
             padding: 24px;
             position: relative;
-            transition: transform 0.2s;
+            transition: box-shadow 0.3s ease;
             break-inside: avoid;
             margin-bottom: 16px;
             display: inline-block;
             width: 100%;
         }
 
-        .testimonial-card:hover {
-            transform: translateY(-4px);
+        .testimonial-card.border-blue:hover {
+            box-shadow: 0 0 0 4px rgba(1, 91, 255, 0.3), 0 0 20px rgba(1, 91, 255, 0.2), 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        .testimonial-card.border-light-blue:hover {
+            box-shadow: 0 0 0 4px rgba(0, 209, 255, 0.3), 0 0 20px rgba(0, 209, 255, 0.2), 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        .testimonial-card.border-green:hover {
+            box-shadow: 0 0 0 4px rgba(149, 221, 131, 0.3), 0 0 20px rgba(149, 221, 131, 0.2), 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        .testimonial-card.border-salmon:hover {
+            box-shadow: 0 0 0 4px rgba(238, 132, 111, 0.3), 0 0 20px rgba(238, 132, 111, 0.2), 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        .testimonial-card.border-purple:hover {
+            box-shadow: 0 0 0 4px rgba(148, 50, 246, 0.3), 0 0 20px rgba(148, 50, 246, 0.2), 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        .testimonial-card.border-yellow:hover {
+            box-shadow: 0 0 0 4px rgba(255, 205, 25, 0.3), 0 0 20px rgba(255, 205, 25, 0.2), 0 8px 24px rgba(0, 0, 0, 0.15);
         }
 
         .testimonial-card .quote-mark {
@@ -963,8 +978,8 @@
 
         .pain-icon {
             flex-shrink: 0;
-            width: 64px;
-            height: 64px;
+            width: 96px;
+            height: 96px;
             background: transparent;
             border-radius: 12px;
             display: flex;
@@ -2327,7 +2342,7 @@
         <div class="container wide">
             <div class="center">
                 <h2>See what we can build <span class="emphasis-text blue">for you</span></h2>
-                <p class="big-paragraph">Explore real demo sites we've created for different industries. Yours will be custom-designed for your brand.</p>
+                <p class="big-paragraph">Explore examples we've created for different industries.<br>Yours will be custom-designed for your brand and your business.</p>
             </div>
             <div class="demo-grid">
                 <a href="https://demosite-fin.levitate.ai/" target="_blank" rel="noopener" class="demo-card">
@@ -2396,28 +2411,28 @@
             <div class="mg-48px"></div>
             <div class="pain-points-grid">
                 <div class="pain-point">
-                    <div class="pain-icon"><picture><source srcset="../icons/icon-reminder.webp" type="image/webp"><img src="../icons/icon-reminder.png" alt="Reminder icon" class="pain-icon-img" width="64" height="64"></picture></div>
+                    <div class="pain-icon"><img src="../images/gemini icon 1.png" alt="Outdated Design" class="pain-icon-img" width="96" height="96"></div>
                     <div>
                         <h2 class="h4-size">Outdated Design</h2>
                         <p>Your site looks like it was built in 2010. Visitors bounce before they even read what you do.</p>
                     </div>
                 </div>
                 <div class="pain-point">
-                    <div class="pain-icon"><picture><source srcset="../icons/icon-network.webp" type="image/webp"><img src="../icons/icon-network.png" alt="Network icon" class="pain-icon-img" width="64" height="64"></picture></div>
+                    <div class="pain-icon"><img src="../images/gemini icon 2.png" alt="Not Mobile-Friendly" class="pain-icon-img" width="96" height="96"></div>
                     <div>
                         <h2 class="h4-size">Not Mobile-Friendly</h2>
                         <p>60%+ of visitors are on their phones. If your site isn't mobile-optimized, you're losing leads.</p>
                     </div>
                 </div>
                 <div class="pain-point">
-                    <div class="pain-icon"><picture><source srcset="../icons/icon-piggybank.webp" type="image/webp"><img src="../icons/icon-piggybank.png" alt="Piggy bank icon" class="pain-icon-img" width="64" height="64"></picture></div>
+                    <div class="pain-icon"><img src="../images/gemini icon 4.png" alt="DIY Template Trap" class="pain-icon-img" width="96" height="96"></div>
                     <div>
                         <h2 class="h4-size">DIY Template Trap</h2>
                         <p>Wix, Squarespace, GoDaddy... you spent weekends wrestling with templates and it still looks generic.</p>
                     </div>
                 </div>
                 <div class="pain-point">
-                    <div class="pain-icon"><picture><source srcset="../icons/icon-frown.webp" type="image/webp"><img src="../icons/icon-frown.png" alt="Frown icon" class="pain-icon-img" width="64" height="64"></picture></div>
+                    <div class="pain-icon"><img src="../images/gemini icon 3.png" alt="No Time to Update" class="pain-icon-img" width="96" height="96"></div>
                     <div>
                         <h2 class="h4-size">No Time to Update</h2>
                         <p>Your site says "© 2019" and lists services you don't even offer anymore. Sound familiar?</p>
@@ -2520,7 +2535,7 @@
             </div>
             <div class="mg-48px"></div>
             <div class="center">
-                <p style="font-size: 16px; color: #666; max-width: 700px; margin: 0 auto 24px;">Plus: Monthly performance reports, content rights you keep forever, and ongoing maintenance included.</p>
+                <p style="font-size: 16px; color: #666; max-width: 900px; margin: 0 auto 24px;">Plus: Monthly performance reports, content rights you keep forever, and ongoing maintenance included.</p>
                 <a href="#demo-form" class="btn-primary">See What's Included for Your Business</a>
             </div>
         </div>
@@ -2541,28 +2556,16 @@
                     <div class="flex-column-visuals">
                         <div class="specialists-grid">
                             <div class="specialist-headshot double-border blue">
-                                <picture>
-                                    <source srcset="../icons/specialist-1.webp" type="image/webp">
-                                    <img src="../icons/specialist-1.png" alt="Success Specialist" class="specialist-photo" width="172" height="172" loading="lazy">
-                                </picture>
+                                <img src="../images/web designer 1.png" alt="Website Designer" class="specialist-photo" width="172" height="172" loading="lazy">
                             </div>
                             <div class="specialist-headshot double-border light-green">
-                                <picture>
-                                    <source srcset="../icons/specialist-2.webp" type="image/webp">
-                                    <img src="../icons/specialist-2.png" alt="Success Specialist" class="specialist-photo" width="172" height="172" loading="lazy">
-                                </picture>
+                                <img src="../images/web designer 2.png" alt="Website Designer" class="specialist-photo" width="172" height="172" loading="lazy">
                             </div>
                             <div class="specialist-headshot double-border purple">
-                                <picture>
-                                    <source srcset="../icons/specialist-4.webp" type="image/webp">
-                                    <img src="../icons/specialist-4.png" alt="Success Specialist" class="specialist-photo" width="172" height="172" loading="lazy">
-                                </picture>
+                                <img src="../images/web designer 3.png" alt="Website Designer" class="specialist-photo" width="172" height="172" loading="lazy">
                             </div>
                             <div class="specialist-headshot double-border salmon">
-                                <picture>
-                                    <source srcset="../icons/specialist-6.webp" type="image/webp">
-                                    <img src="../icons/specialist-6.png" alt="Success Specialist" class="specialist-photo" width="172" height="172" loading="lazy">
-                                </picture>
+                                <img src="../images/web designer 4.png" alt="Website Designer" class="specialist-photo" width="172" height="172" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -2796,7 +2799,7 @@
                 <div class="step">
                     <div class="step-number">3</div>
                     <h2 class="h4-size">Launch & Maintain</h2>
-                    <p>We handle the launch, set up analytics, and continue maintaining your site. Updates are always included.</p>
+                    <p>We publish your site, set up analytics, and continue maintaining your site. Updates are always included.</p>
                 </div>
             </div>
             <div class="mg-48px"></div>
